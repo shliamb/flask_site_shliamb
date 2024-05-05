@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
@@ -7,18 +7,20 @@ def home():
     return 'Добро пожаловать на мой сайт на Flask!'
 
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        # проверка логина и пароля
+        return 'Вы вошли в систему!'
+    else:
+        return render_template('login.html')
+
+
 @app.route('/about')
 def about():
-    return 'Здесь будет информация об авторе сайта.'
-
-@app.route('/blog')
-def blog():
-    return 'Это блог с заметками о работе и увлечениях.'
-
-
-@app.route('/user/<username>')
-def user_profile(username):
-    return f"Это профиль пользователя {username}"
+    return render_template('about.html')
 
 
 if __name__ == '__main__':
