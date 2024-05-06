@@ -1,2 +1,4 @@
 venv/
 .idea/
+appweb/.env
+.env
