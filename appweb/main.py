@@ -1,20 +1,40 @@
+import sys
+from pathlib import Path
+root_path = str(Path(__file__).resolve().parent.parent)
+sys.path.append(root_path)
+
 from flask import Flask, request, render_template
-from models import db
-from keys import user_db, paswor_db
+from api.worker_db import api_blueprint
 
 app = Flask(__name__)
-
-app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://{user_db}:{paswor_db}@localhost:5432/my_database"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-# связываем приложение и экземпляр SQLAlchemy
-db.init_app(app)
+app.register_blueprint(api_blueprint, url_prefix='/api')
 
 
 
 @app.route('/')
 def home():
     return render_template('main.html')
+
+
+
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
+
+
+
+
+
+
 
 
 
@@ -60,13 +80,5 @@ def home():
 #                 filter(Manufacturer.name == manufacturer).\
 #                 filter(Category.name == category).all()
 #     return render_template('items.html', manufacturer=manufacturer, category=category, items=items)
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
 
 

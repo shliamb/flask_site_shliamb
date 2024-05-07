@@ -1,5 +1,4 @@
 from flask_sqlalchemy import SQLAlchemy
-
 from sqlalchemy.dialects.postgresql import UUID
 import uuid
 
@@ -22,6 +21,7 @@ class Page_main(db.Model):
     seo_keyword = db.Column(db.String(500), nullable=True, index=True)
     text_body = db.Column(db.String(5000), nullable=True, index=True)
     id_who_changed = db.Column(db.BigInteger, nullable=True)
+    #time_zone = +3
     views = db.Column(db.Integer, nullable=True)
     publish = db.Column(db.Boolean, default=True, nullable=False, index=True)
     date_create = db.Column(db.DateTime, nullable=True)

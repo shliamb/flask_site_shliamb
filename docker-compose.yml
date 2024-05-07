@@ -4,22 +4,23 @@ services:
 
   postgres:
     image: postgres:15.6 # latest # 16.1 
-    container_name: app_postgres
+    container_name: flask_postgres
     environment:
       POSTGRES_USER: ${USER_DB}
       POSTGRES_PASSWORD: ${PASWOR_DB}
-      POSTGRES_DB: my_database
+      POSTGRES_DB: flask_database
     ports:
-      - "127.0.0.1:5432:5432"
+      - "127.0.0.1:5433:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - flask_postgres_data:/var/lib/postgresql/data
     networks:
-      - db-network
+      - flask-network
 
 
 volumes:
-  postgres_data:
+  flask_postgres_data:
 
 networks:
-  db-network:
+  flask-network:
     driver: bridge
+
