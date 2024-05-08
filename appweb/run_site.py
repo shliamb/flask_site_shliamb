@@ -18,8 +18,8 @@ app = Flask(__name__)
 
 
 # Регистрация Blueprint'ов
-app.register_blueprint(api_blueprint, url_prefix='/api')
-app.register_blueprint(views_blueprint, url_prefix='/')
+app.register_blueprint(api_blueprint, url_prefix='/api') # API
+app.register_blueprint(views_blueprint, url_prefix='/') # Default site
 
 
 if __name__ == '__main__':

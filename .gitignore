@@ -2,3 +2,7 @@ venv/
 .idea/
 appweb/.env
 .env
+appweb/test.py
+appweb/__pycache__
+routing/__pycache__
+__pycache__

@@ -106,7 +106,7 @@ from routing.worker_db import read_data_main, write_data_main, update_data_main,
 # id = "vreate-bot-2"
 
 page_1 = "telegram-bot"
-page_2 = "vreate-bot"
+page_2 = "vreate-bot-2"
 
 # # id = "site"
 
