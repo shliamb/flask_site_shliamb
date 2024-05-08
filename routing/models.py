@@ -27,6 +27,25 @@ class Page_main(db.Model):
     date_create = db.Column(db.DateTime, nullable=True)
     date_update = db.Column(db.DateTime, nullable=True)
 
+    def serialize(self):
+        return {
+            'id': self.id,
+            'responsive': self.responsive,
+            'lang': self.lang,
+            'return_code': self.return_code,
+            'comments': self.comments,
+            'title': self.title,
+            'seo_title': self.seo_title,
+            'seo_description': self.seo_description,
+            'seo_keyword': self.seo_keyword,
+            'text_body': self.text_body,
+            'id_who_changed': self.id_who_changed,
+            'views': self.views,
+            'publish': self.publish,
+            'date_create': self.date_create,
+            'date_update': self.date_update
+        }
+
 # Страницы первого порядка id ключ - это url страницы, праметры и текст
 class Page_1(db.Model):
     id = db.Column(db.String(100), nullable=False, primary_key=True, index=True, unique=True) # url page_1
@@ -43,6 +62,21 @@ class Page_1(db.Model):
 ####
     sessions = db.relationship('Page_2', backref='page_1', lazy=True)
 
+    def serialize(self):
+        return {
+            'id': self.id,
+            'title': self.title,
+            'seo_title': self.seo_title,
+            'seo_description': self.seo_description,
+            'seo_keyword': self.seo_keyword,
+            'text_body': self.text_body,
+            'id_who_changed': self.id_who_changed,
+            'views': self.views,
+            'publish': self.publish,
+            'date_create': self.date_create,
+            'date_update': self.date_update,
+        }
+
 # Страницы второго порядка
 class Page_2(db.Model):
     id = db.Column(db.String(100), nullable=False, primary_key=True, index=True, unique=True) # url page_2
@@ -57,8 +91,24 @@ class Page_2(db.Model):
     date_create = db.Column(db.DateTime, nullable=True)
     date_update = db.Column(db.DateTime, nullable=True)
 ####
-    page_1_id = db.Column(db.String(100), db.ForeignKey('page_1.id'), nullable=False)
+    page_1_id = db.Column(db.String(100), db.ForeignKey('page_1.id'), nullable=False) # Родительская страница
     sessions = db.relationship('Comments', backref='page_2', lazy=True)
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'title': self.title,
+            'seo_title': self.seo_title,
+            'seo_description': self.seo_description,
+            'seo_keyword': self.seo_keyword,
+            'text_body': self.text_body,
+            'id_who_changed': self.id_who_changed,
+            'views': self.views,
+            'publish': self.publish,
+            'date_create': self.date_create,
+            'date_update': self.date_update,
+            'page_1_id': self.page_1_id,
+        }
 
 # Комментарии на страницах второго порядка page_2_id - url родителя комментария
 class Comments(db.Model):
@@ -91,6 +141,7 @@ class Sitemap(db.Model):
 
     page_2_id = db.Column(db.String(100), nullable=True, index=True, unique=True)
     date_page_2 = db.Column(db.DateTime, nullable=True)
+
 
 
 

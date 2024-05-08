@@ -1,27 +1,25 @@
+#### Relative imports ####
 import sys
 from pathlib import Path
 root_path = str(Path(__file__).resolve().parent.parent)
 sys.path.append(root_path)
-
+#### Logging ####
+import logging
+logging.basicConfig(level=logging.INFO, filename='./appweb/log/appweb.log', filemode='a', format='%(levelname)s - %(asctime)s - %(name)s - %(message)s',) 
+#### Flask ####
 from flask import Flask, request, render_template
-from api.worker_db import api_blueprint
+#### Modules ####
+from routing.api import api_blueprint
+from routing.views import views_blueprint
+
+
 
 app = Flask(__name__)
+
+
+# Регистрация Blueprint'ов
 app.register_blueprint(api_blueprint, url_prefix='/api')
-
-
-
-@app.route('/')
-def home():
-    return render_template('main.html')
-
-
-
-
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
+app.register_blueprint(views_blueprint, url_prefix='/')
 
 
 if __name__ == '__main__':
@@ -37,6 +35,31 @@ if __name__ == '__main__':
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# @app.route('/')
+# def home():
+#     return render_template('main.html')
+
+# @app.route('/about')
+# def about():
+#     return render_template('about.html')
 
 # @app.route('/songs')
 # def songs():

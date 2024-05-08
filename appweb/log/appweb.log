@@ -2,3 +2,582 @@ ERROR - 2024-05-07 13:47:57,678 - root - Error: write data to table page_main: (
 	Is the server running on that host and accepting TCP/IP connections?
 
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
+INFO - 2024-05-08 16:36:34,253 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 16:36:34,254 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 16:36:34,255 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 16:36:34,747 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 16:36:34,747 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 16:36:43,899 - werkzeug - 127.0.0.1 - - [08/May/2024 16:36:43] "[35m[1mGET /page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 16:36:43,963 - werkzeug - 127.0.0.1 - - [08/May/2024 16:36:43] "[36mGET /page/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 16:36:43,965 - werkzeug - 127.0.0.1 - - [08/May/2024 16:36:43] "[36mGET /page/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 16:36:43,985 - werkzeug - 127.0.0.1 - - [08/May/2024 16:36:43] "[36mGET /page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 16:36:44,040 - werkzeug - 127.0.0.1 - - [08/May/2024 16:36:44] "[36mGET /page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 16:36:46,556 - werkzeug - 127.0.0.1 - - [08/May/2024 16:36:46] "[33mGET /page/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 16:36:46,985 - werkzeug - 127.0.0.1 - - [08/May/2024 16:36:46] "[33mGET /page/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 16:36:50,924 - werkzeug - 127.0.0.1 - - [08/May/2024 16:36:50] "[35m[1mGET /page/2 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 16:36:50,996 - werkzeug - 127.0.0.1 - - [08/May/2024 16:36:50] "GET /page/2?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO - 2024-05-08 16:36:50,997 - werkzeug - 127.0.0.1 - - [08/May/2024 16:36:50] "GET /page/2?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO - 2024-05-08 16:36:51,022 - werkzeug - 127.0.0.1 - - [08/May/2024 16:36:51] "GET /page/2?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 16:36:51,073 - werkzeug - 127.0.0.1 - - [08/May/2024 16:36:51] "[36mGET /page/2?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 16:42:43,411 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 16:42:43,411 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 16:42:43,412 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 16:42:43,907 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 16:42:43,907 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 16:42:47,807 - werkzeug - 127.0.0.1 - - [08/May/2024 16:42:47] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 16:42:47,864 - werkzeug - 127.0.0.1 - - [08/May/2024 16:42:47] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 16:42:47,864 - werkzeug - 127.0.0.1 - - [08/May/2024 16:42:47] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 16:42:47,892 - werkzeug - 127.0.0.1 - - [08/May/2024 16:42:47] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 16:42:47,944 - werkzeug - 127.0.0.1 - - [08/May/2024 16:42:47] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 16:42:50,134 - werkzeug - 127.0.0.1 - - [08/May/2024 16:42:50] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 16:42:50,180 - werkzeug - 127.0.0.1 - - [08/May/2024 16:42:50] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 16:42:50,181 - werkzeug - 127.0.0.1 - - [08/May/2024 16:42:50] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 16:42:50,213 - werkzeug - 127.0.0.1 - - [08/May/2024 16:42:50] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 16:42:50,291 - werkzeug - 127.0.0.1 - - [08/May/2024 16:42:50] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:12:18,084 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 17:12:18,084 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 17:12:18,086 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 17:12:18,609 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 17:12:18,609 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 17:12:28,108 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:28] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:12:28,171 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:28] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:12:28,172 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:28] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:12:28,220 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:28] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:12:28,301 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:28] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:12:40,129 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:40] "[33mGET /api/page/https://shliamb.ru HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 17:12:49,218 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:49] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:12:49,427 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:49] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:12:49,492 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:49] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:12:49,493 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:49] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:12:49,514 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:49] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:12:54,014 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:54] "[35m[1mGET /api/page/143 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:12:54,060 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:54] "GET /api/page/143?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO - 2024-05-08 17:12:54,063 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:54] "GET /api/page/143?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO - 2024-05-08 17:12:54,094 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:54] "GET /api/page/143?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 17:12:54,151 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:54] "[36mGET /api/page/143?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:12:58,762 - werkzeug - 127.0.0.1 - - [08/May/2024 17:12:58] "[33mGET /api/page/ddf HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 17:13:03,484 - werkzeug - 127.0.0.1 - - [08/May/2024 17:13:03] "[33mGET /api/page HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 17:13:06,683 - werkzeug - 127.0.0.1 - - [08/May/2024 17:13:06] "[33mGET /api/page/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 17:13:09,761 - werkzeug - 127.0.0.1 - - [08/May/2024 17:13:09] "[33mGET /api/page/a HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 17:13:13,052 - werkzeug - 127.0.0.1 - - [08/May/2024 17:13:13] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:13:14,229 - werkzeug - 127.0.0.1 - - [08/May/2024 17:13:14] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:13:14,290 - werkzeug - 127.0.0.1 - - [08/May/2024 17:13:14] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:13:14,291 - werkzeug - 127.0.0.1 - - [08/May/2024 17:13:14] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:13:14,310 - werkzeug - 127.0.0.1 - - [08/May/2024 17:13:14] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:15:03,508 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 17:15:03,509 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 17:15:03,509 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 17:15:03,989 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 17:15:03,989 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 17:15:06,948 - werkzeug - 127.0.0.1 - - [08/May/2024 17:15:06] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:15:07,008 - werkzeug - 127.0.0.1 - - [08/May/2024 17:15:07] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:15:07,015 - werkzeug - 127.0.0.1 - - [08/May/2024 17:15:07] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:15:07,030 - werkzeug - 127.0.0.1 - - [08/May/2024 17:15:07] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:15:07,079 - werkzeug - 127.0.0.1 - - [08/May/2024 17:15:07] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:15:09,536 - werkzeug - 127.0.0.1 - - [08/May/2024 17:15:09] "[35m[1mGET /api/page/d HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:15:09,587 - werkzeug - 127.0.0.1 - - [08/May/2024 17:15:09] "GET /api/page/d?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO - 2024-05-08 17:15:09,587 - werkzeug - 127.0.0.1 - - [08/May/2024 17:15:09] "GET /api/page/d?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO - 2024-05-08 17:15:09,609 - werkzeug - 127.0.0.1 - - [08/May/2024 17:15:09] "GET /api/page/d?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 17:15:09,657 - werkzeug - 127.0.0.1 - - [08/May/2024 17:15:09] "[36mGET /api/page/d?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:15:19,700 - werkzeug - 127.0.0.1 - - [08/May/2024 17:15:19] "[33mGET /api/page/https://shliamb.ru HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 17:17:47,157 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 17:17:47,158 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 17:17:47,158 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 17:17:47,646 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 17:17:47,647 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 17:17:53,130 - werkzeug - 127.0.0.1 - - [08/May/2024 17:17:53] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:17:53,554 - werkzeug - 127.0.0.1 - - [08/May/2024 17:17:53] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:17:53,629 - werkzeug - 127.0.0.1 - - [08/May/2024 17:17:53] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:17:53,631 - werkzeug - 127.0.0.1 - - [08/May/2024 17:17:53] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:17:53,646 - werkzeug - 127.0.0.1 - - [08/May/2024 17:17:53] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:17:59,376 - werkzeug - 127.0.0.1 - - [08/May/2024 17:17:59] "[35m[1mGET /api/page/'1' HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:17:59,434 - werkzeug - 127.0.0.1 - - [08/May/2024 17:17:59] "GET /api/page/'1'?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO - 2024-05-08 17:17:59,439 - werkzeug - 127.0.0.1 - - [08/May/2024 17:17:59] "GET /api/page/'1'?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO - 2024-05-08 17:17:59,460 - werkzeug - 127.0.0.1 - - [08/May/2024 17:17:59] "GET /api/page/'1'?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 17:17:59,503 - werkzeug - 127.0.0.1 - - [08/May/2024 17:17:59] "[36mGET /api/page/'1'?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:18:03,820 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:03] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:18:04,747 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:04] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:18:04,794 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:04] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:18:04,799 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:04] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:18:04,828 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:04] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:18:29,064 - werkzeug -  * Detected change in '/home/san/Desktop/programs/flask_site_shliamb/api/api.py', reloading
+INFO - 2024-05-08 17:18:29,161 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 17:18:29,663 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 17:18:29,663 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 17:18:33,686 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 17:18:33,686 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 17:18:33,687 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 17:18:34,171 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 17:18:34,172 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 17:18:37,001 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:37] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:18:37,056 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:37] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:18:37,057 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:37] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:18:37,089 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:37] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:18:37,140 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:37] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:18:44,375 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:44] "[35m[1mGET /api/page/r HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:18:44,435 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:44] "GET /api/page/r?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO - 2024-05-08 17:18:44,435 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:44] "GET /api/page/r?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO - 2024-05-08 17:18:44,460 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:44] "GET /api/page/r?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 17:18:44,516 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:44] "[36mGET /api/page/r?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:18:47,821 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:47] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:18:50,200 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:50] "[35m[1mGET /api/page/132 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:18:50,256 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:50] "GET /api/page/132?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO - 2024-05-08 17:18:50,257 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:50] "GET /api/page/132?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO - 2024-05-08 17:18:50,286 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:50] "GET /api/page/132?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 17:18:50,338 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:50] "[36mGET /api/page/132?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:18:52,363 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:52] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:18:55,528 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:55] "[35m[1mGET /api/page/'1' HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:18:55,593 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:55] "[36mGET /api/page/'1'?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:18:55,598 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:55] "[36mGET /api/page/'1'?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:18:55,622 - werkzeug - 127.0.0.1 - - [08/May/2024 17:18:55] "[36mGET /api/page/'1'?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:19:00,273 - werkzeug - 127.0.0.1 - - [08/May/2024 17:19:00] "[33mGET /api/page/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 17:19:04,900 - werkzeug - 127.0.0.1 - - [08/May/2024 17:19:04] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:19:05,101 - werkzeug - 127.0.0.1 - - [08/May/2024 17:19:05] "[35m[1mGET /api/page/1 HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 17:19:05,163 - werkzeug - 127.0.0.1 - - [08/May/2024 17:19:05] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:19:05,166 - werkzeug - 127.0.0.1 - - [08/May/2024 17:19:05] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:19:05,191 - werkzeug - 127.0.0.1 - - [08/May/2024 17:19:05] "[36mGET /api/page/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 17:20:09,144 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 17:20:09,145 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 17:20:09,145 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 17:20:09,643 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 17:20:09,644 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 17:20:11,581 - werkzeug - 127.0.0.1 - - [08/May/2024 17:20:11] "GET /api/page/1 HTTP/1.1" 200 -
+INFO - 2024-05-08 17:31:30,642 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 17:31:30,642 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 17:31:30,643 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 17:31:31,138 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 17:31:31,138 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 17:31:35,818 - werkzeug - 127.0.0.1 - - [08/May/2024 17:31:35] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-08 17:31:40,459 - werkzeug - 127.0.0.1 - - [08/May/2024 17:31:40] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-08 17:43:06,947 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 17:43:06,947 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 17:43:06,948 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 17:43:07,456 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 17:43:07,457 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 17:43:10,638 - werkzeug - 127.0.0.1 - - [08/May/2024 17:43:10] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-08 17:43:22,648 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 17:43:22,648 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 17:43:22,650 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 17:43:23,116 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 17:43:23,116 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 17:43:25,137 - werkzeug - 127.0.0.1 - - [08/May/2024 17:43:25] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-08 17:43:27,946 - werkzeug - 127.0.0.1 - - [08/May/2024 17:43:27] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-08 17:43:33,933 - werkzeug - 127.0.0.1 - - [08/May/2024 17:43:33] "[33mGET /page/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 17:43:34,403 - werkzeug - 127.0.0.1 - - [08/May/2024 17:43:34] "[33mGET /page/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 17:43:37,676 - werkzeug - 127.0.0.1 - - [08/May/2024 17:43:37] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-08 18:14:53,587 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 18:14:53,588 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 18:14:53,588 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 18:14:54,075 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 18:14:54,075 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 18:14:56,834 - werkzeug - 127.0.0.1 - - [08/May/2024 18:14:56] "GET /telegram-bot HTTP/1.1" 200 -
+INFO - 2024-05-08 18:15:18,698 - werkzeug - 127.0.0.1 - - [08/May/2024 18:15:18] "GET /site HTTP/1.1" 200 -
+INFO - 2024-05-08 18:15:26,116 - werkzeug - 127.0.0.1 - - [08/May/2024 18:15:26] "[33mGET /site/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 18:15:37,819 - werkzeug - 127.0.0.1 - - [08/May/2024 18:15:37] "GET /site HTTP/1.1" 200 -
+INFO - 2024-05-08 18:15:59,892 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 18:15:59,892 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 18:15:59,893 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 18:16:00,385 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 18:16:00,386 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 18:16:02,759 - werkzeug - 127.0.0.1 - - [08/May/2024 18:16:02] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-08 18:16:05,349 - werkzeug - 127.0.0.1 - - [08/May/2024 18:16:05] "[32mGET /site HTTP/1.1[0m" 308 -
+INFO - 2024-05-08 18:16:05,364 - werkzeug - 127.0.0.1 - - [08/May/2024 18:16:05] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-08 18:16:08,012 - werkzeug - 127.0.0.1 - - [08/May/2024 18:16:08] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-08 18:16:10,439 - werkzeug - 127.0.0.1 - - [08/May/2024 18:16:10] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-08 18:16:13,937 - werkzeug - 127.0.0.1 - - [08/May/2024 18:16:13] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-08 18:48:41,154 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 18:48:41,154 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 18:48:41,155 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 18:48:41,670 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 18:48:41,671 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 18:51:58,834 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 18:51:58,834 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 18:51:58,835 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 18:51:59,320 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 18:51:59,320 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 18:52:05,024 - werkzeug - 127.0.0.1 - - [08/May/2024 18:52:05] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 18:52:05,070 - werkzeug - 127.0.0.1 - - [08/May/2024 18:52:05] "GET /site/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO - 2024-05-08 18:52:05,071 - werkzeug - 127.0.0.1 - - [08/May/2024 18:52:05] "GET /site/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO - 2024-05-08 18:52:05,114 - werkzeug - 127.0.0.1 - - [08/May/2024 18:52:05] "GET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 18:52:05,173 - werkzeug - 127.0.0.1 - - [08/May/2024 18:52:05] "[36mGET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:52:58,538 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 18:52:58,538 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 18:52:58,539 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 18:52:59,030 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 18:52:59,030 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 18:53:02,329 - werkzeug - 127.0.0.1 - - [08/May/2024 18:53:02] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 18:53:02,374 - werkzeug - 127.0.0.1 - - [08/May/2024 18:53:02] "[36mGET /site/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:53:02,377 - werkzeug - 127.0.0.1 - - [08/May/2024 18:53:02] "[36mGET /site/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:53:02,412 - werkzeug - 127.0.0.1 - - [08/May/2024 18:53:02] "[36mGET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:53:02,466 - werkzeug - 127.0.0.1 - - [08/May/2024 18:53:02] "[36mGET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:54:20,917 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 18:54:20,917 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 18:54:20,917 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 18:54:21,434 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 18:54:21,434 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 18:54:33,215 - werkzeug - 127.0.0.1 - - [08/May/2024 18:54:33] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 18:54:34,047 - werkzeug - 127.0.0.1 - - [08/May/2024 18:54:34] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-08 18:54:35,193 - werkzeug - 127.0.0.1 - - [08/May/2024 18:54:35] "[32mGET /telegram-bot HTTP/1.1[0m" 308 -
+INFO - 2024-05-08 18:54:35,211 - werkzeug - 127.0.0.1 - - [08/May/2024 18:54:35] "[35m[1mGET /telegram-bot/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 18:54:35,274 - werkzeug - 127.0.0.1 - - [08/May/2024 18:54:35] "GET /telegram-bot/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO - 2024-05-08 18:54:35,274 - werkzeug - 127.0.0.1 - - [08/May/2024 18:54:35] "GET /telegram-bot/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO - 2024-05-08 18:54:35,306 - werkzeug - 127.0.0.1 - - [08/May/2024 18:54:35] "GET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 18:54:35,362 - werkzeug - 127.0.0.1 - - [08/May/2024 18:54:35] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:56:53,533 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 18:56:53,533 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 18:56:53,534 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 18:56:54,052 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 18:56:54,052 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 18:56:56,179 - werkzeug - 127.0.0.1 - - [08/May/2024 18:56:56] "[35m[1mGET /telegram-bot/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 18:56:56,237 - werkzeug - 127.0.0.1 - - [08/May/2024 18:56:56] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:56:56,238 - werkzeug - 127.0.0.1 - - [08/May/2024 18:56:56] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:56:56,263 - werkzeug - 127.0.0.1 - - [08/May/2024 18:56:56] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:56:56,315 - werkzeug - 127.0.0.1 - - [08/May/2024 18:56:56] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:58:23,980 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 18:58:23,980 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 18:58:23,981 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 18:58:24,490 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 18:58:24,490 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 18:58:26,910 - werkzeug - 127.0.0.1 - - [08/May/2024 18:58:26] "[35m[1mGET /telegram-bot/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 18:58:26,963 - werkzeug - 127.0.0.1 - - [08/May/2024 18:58:26] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:58:26,965 - werkzeug - 127.0.0.1 - - [08/May/2024 18:58:26] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:58:26,994 - werkzeug - 127.0.0.1 - - [08/May/2024 18:58:26] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:58:27,050 - werkzeug - 127.0.0.1 - - [08/May/2024 18:58:27] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:58:57,339 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 18:58:57,339 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 18:58:57,340 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 18:58:57,863 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 18:58:57,863 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 18:59:00,650 - werkzeug - 127.0.0.1 - - [08/May/2024 18:59:00] "[35m[1mGET /telegram-bot/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 18:59:00,708 - werkzeug - 127.0.0.1 - - [08/May/2024 18:59:00] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:59:00,708 - werkzeug - 127.0.0.1 - - [08/May/2024 18:59:00] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:59:00,734 - werkzeug - 127.0.0.1 - - [08/May/2024 18:59:00] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:59:00,785 - werkzeug - 127.0.0.1 - - [08/May/2024 18:59:00] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:59:26,073 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 18:59:26,073 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 18:59:26,074 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 18:59:26,562 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 18:59:26,562 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 18:59:28,951 - werkzeug - 127.0.0.1 - - [08/May/2024 18:59:28] "[35m[1mGET /telegram-bot/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 18:59:29,000 - werkzeug - 127.0.0.1 - - [08/May/2024 18:59:29] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:59:29,000 - werkzeug - 127.0.0.1 - - [08/May/2024 18:59:29] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:59:29,027 - werkzeug - 127.0.0.1 - - [08/May/2024 18:59:29] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:59:29,083 - werkzeug - 127.0.0.1 - - [08/May/2024 18:59:29] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 18:59:56,917 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 18:59:56,917 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 18:59:56,918 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 18:59:57,452 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 18:59:57,453 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:00:02,552 - werkzeug - 127.0.0.1 - - [08/May/2024 19:00:02] "[35m[1mGET /telegram-bot/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:00:02,611 - werkzeug - 127.0.0.1 - - [08/May/2024 19:00:02] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:00:02,613 - werkzeug - 127.0.0.1 - - [08/May/2024 19:00:02] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:00:02,639 - werkzeug - 127.0.0.1 - - [08/May/2024 19:00:02] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:00:02,694 - werkzeug - 127.0.0.1 - - [08/May/2024 19:00:02] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:00:57,829 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:00:57,830 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:00:57,831 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:00:58,308 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:00:58,309 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:01:20,195 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:20] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:01:20,279 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:20] "[36mGET /site/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:01:20,281 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:20] "[36mGET /site/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:01:20,304 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:20] "[36mGET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:01:22,984 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:22] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:01:23,025 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:23,026 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:23,065 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:23,117 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:23,159 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:01:23,203 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:23,205 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:23,258 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:23,302 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:23,333 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:01:23,377 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:23,379 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:23,408 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:23,473 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:01:23,517 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:23,519 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:23,555 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:23,617 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:23] "GET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:26,460 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:26] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:01:27,092 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:27] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-08 19:01:28,148 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:28] "[32mGET /favicon.ico HTTP/1.1[0m" 308 -
+INFO - 2024-05-08 19:01:28,155 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:28] "[33mGET /favicon.ico/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:01:35,894 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:35] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:01:37,088 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:37] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:01:37,146 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:37] "[36mGET /site/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:01:37,147 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:37] "[36mGET /site/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:01:37,184 - werkzeug - 127.0.0.1 - - [08/May/2024 19:01:37] "[36mGET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:02:05,735 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:02:05,735 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:02:05,736 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:02:06,253 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:02:06,253 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:02:09,144 - werkzeug - 127.0.0.1 - - [08/May/2024 19:02:09] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:02:09,206 - werkzeug - 127.0.0.1 - - [08/May/2024 19:02:09] "[36mGET /site/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:02:09,207 - werkzeug - 127.0.0.1 - - [08/May/2024 19:02:09] "[36mGET /site/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:02:09,232 - werkzeug - 127.0.0.1 - - [08/May/2024 19:02:09] "[36mGET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:02:09,285 - werkzeug - 127.0.0.1 - - [08/May/2024 19:02:09] "[36mGET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:03:11,398 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:03:11,398 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:03:11,399 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:03:11,958 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:03:11,959 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:03:14,043 - werkzeug - 127.0.0.1 - - [08/May/2024 19:03:14] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:03:14,105 - werkzeug - 127.0.0.1 - - [08/May/2024 19:03:14] "[36mGET /site/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:03:14,105 - werkzeug - 127.0.0.1 - - [08/May/2024 19:03:14] "[36mGET /site/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:03:14,125 - werkzeug - 127.0.0.1 - - [08/May/2024 19:03:14] "[36mGET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:03:14,172 - werkzeug - 127.0.0.1 - - [08/May/2024 19:03:14] "[36mGET /site/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:03:51,241 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:03:51,241 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:03:51,242 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:03:51,767 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:03:51,768 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:03:53,749 - werkzeug - 127.0.0.1 - - [08/May/2024 19:03:53] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:05:28,141 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:05:28,141 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:05:28,142 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:05:28,670 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:05:28,670 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:05:31,418 - werkzeug - 127.0.0.1 - - [08/May/2024 19:05:31] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:05:34,383 - werkzeug - 127.0.0.1 - - [08/May/2024 19:05:34] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-08 19:05:57,223 - werkzeug - 127.0.0.1 - - [08/May/2024 19:05:57] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:17:18,498 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:17:18,499 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:17:18,500 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:17:18,996 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:17:18,996 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:17:21,872 - werkzeug - 127.0.0.1 - - [08/May/2024 19:17:21] "[33mGET /telegram-bot/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:17:25,016 - werkzeug - 127.0.0.1 - - [08/May/2024 19:17:25] "[33mGET /telegram-bot/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:18:11,184 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:18:11,185 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:18:11,186 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:18:11,710 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:18:11,711 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:18:13,121 - werkzeug - 127.0.0.1 - - [08/May/2024 19:18:13] "[33mGET /telegram-bot/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:18:15,985 - werkzeug - 127.0.0.1 - - [08/May/2024 19:18:15] "[33mGET /telegram-bot/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:18:18,631 - werkzeug - 127.0.0.1 - - [08/May/2024 19:18:18] "[35m[1mGET /telegram-bot/f HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:18:18,698 - werkzeug - 127.0.0.1 - - [08/May/2024 19:18:18] "GET /telegram-bot/f?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO - 2024-05-08 19:18:18,698 - werkzeug - 127.0.0.1 - - [08/May/2024 19:18:18] "GET /telegram-bot/f?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO - 2024-05-08 19:18:18,719 - werkzeug - 127.0.0.1 - - [08/May/2024 19:18:18] "GET /telegram-bot/f?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - 2024-05-08 19:18:18,783 - werkzeug - 127.0.0.1 - - [08/May/2024 19:18:18] "[36mGET /telegram-bot/f?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:18:37,127 - werkzeug - 127.0.0.1 - - [08/May/2024 19:18:37] "[33mGET /telegram-bot/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:18:37,485 - werkzeug - 127.0.0.1 - - [08/May/2024 19:18:37] "[33mGET /telegram-bot/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:19:58,466 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:19:58,467 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:19:58,467 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:19:58,966 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:19:58,967 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:20:00,959 - werkzeug - 127.0.0.1 - - [08/May/2024 19:20:00] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:20:04,728 - werkzeug - 127.0.0.1 - - [08/May/2024 19:20:04] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:20:12,857 - werkzeug - 127.0.0.1 - - [08/May/2024 19:20:12] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:20:23,210 - werkzeug - 127.0.0.1 - - [08/May/2024 19:20:23] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:20:29,732 - werkzeug - 127.0.0.1 - - [08/May/2024 19:20:29] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:20:33,955 - werkzeug - 127.0.0.1 - - [08/May/2024 19:20:33] "[33mGET /telegram-bot/fd HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:21:06,081 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:21:06,081 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:21:06,082 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:21:06,571 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:21:06,571 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:21:09,881 - werkzeug - 127.0.0.1 - - [08/May/2024 19:21:09] "[35m[1mGET /telegram-bot/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:21:09,964 - werkzeug - 127.0.0.1 - - [08/May/2024 19:21:09] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:21:09,964 - werkzeug - 127.0.0.1 - - [08/May/2024 19:21:09] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:21:09,983 - werkzeug - 127.0.0.1 - - [08/May/2024 19:21:09] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:21:10,032 - werkzeug - 127.0.0.1 - - [08/May/2024 19:21:10] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:21:19,712 - werkzeug -  * Detected change in '/home/san/Desktop/programs/flask_site_shliamb/api/api.py', reloading
+INFO - 2024-05-08 19:21:19,811 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:21:20,298 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:21:20,298 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:21:27,571 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:21:27,571 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:21:27,572 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:21:28,074 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:21:28,075 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:21:30,082 - werkzeug - 127.0.0.1 - - [08/May/2024 19:21:30] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:22:15,447 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:22:15,447 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:22:15,448 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:22:15,968 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:22:15,968 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:22:19,168 - werkzeug - 127.0.0.1 - - [08/May/2024 19:22:19] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:22:21,781 - werkzeug - 127.0.0.1 - - [08/May/2024 19:22:21] "[33mGET /telegram-bot/апа HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:22:26,925 - werkzeug - 127.0.0.1 - - [08/May/2024 19:22:26] "[33mGET /telegram-bot/апа HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:26:54,195 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:26:54,195 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:26:54,196 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:26:54,704 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:26:54,705 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:26:58,163 - werkzeug - 127.0.0.1 - - [08/May/2024 19:26:58] "[32mGET /telegram-bot/апа HTTP/1.1[0m" 308 -
+INFO - 2024-05-08 19:26:58,203 - werkzeug - 127.0.0.1 - - [08/May/2024 19:26:58] "[33mGET /telegram-bot/апа/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:27:23,383 - werkzeug - 127.0.0.1 - - [08/May/2024 19:27:23] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:27:41,034 - werkzeug - 127.0.0.1 - - [08/May/2024 19:27:41] "[32mGET /telegram-bot/site-page HTTP/1.1[0m" 308 -
+INFO - 2024-05-08 19:27:41,046 - werkzeug - 127.0.0.1 - - [08/May/2024 19:27:41] "[33mGET /telegram-bot/site-page/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:27:53,966 - werkzeug - 127.0.0.1 - - [08/May/2024 19:27:53] "[33mGET /site/site-page/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:28:17,175 - werkzeug - 127.0.0.1 - - [08/May/2024 19:28:17] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:28:19,065 - werkzeug - 127.0.0.1 - - [08/May/2024 19:28:19] "[32mGET /telegram-bot/vreate-bot HTTP/1.1[0m" 308 -
+INFO - 2024-05-08 19:28:19,078 - werkzeug - 127.0.0.1 - - [08/May/2024 19:28:19] "[33mGET /telegram-bot/vreate-bot/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:28:36,669 - werkzeug -  * Detected change in '/home/san/Desktop/programs/flask_site_shliamb/appweb/test.py', reloading
+INFO - 2024-05-08 19:28:36,767 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:28:37,242 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:28:37,242 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:28:44,318 - werkzeug -  * Detected change in '/home/san/Desktop/programs/flask_site_shliamb/appweb/test.py', reloading
+INFO - 2024-05-08 19:28:44,404 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:28:44,875 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:28:44,876 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:29:25,290 - werkzeug -  * Detected change in '/home/san/Desktop/programs/flask_site_shliamb/appweb/test.py', reloading
+INFO - 2024-05-08 19:29:25,384 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:29:25,837 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:29:25,837 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:29:37,954 - werkzeug -  * Detected change in '/home/san/Desktop/programs/flask_site_shliamb/api/models.py', reloading
+INFO - 2024-05-08 19:29:38,051 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:29:38,514 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:29:38,514 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:30:49,205 - werkzeug -  * Detected change in '/home/san/Desktop/programs/flask_site_shliamb/appweb/test.py', reloading
+INFO - 2024-05-08 19:30:49,297 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:30:49,772 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:30:49,772 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:31:54,712 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:31:54,712 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:31:54,713 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:31:55,211 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:31:55,211 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:31:58,298 - werkzeug - 127.0.0.1 - - [08/May/2024 19:31:58] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:32:11,582 - werkzeug - 127.0.0.1 - - [08/May/2024 19:32:11] "[33mGET /site/vreate-bot/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:32:33,610 - werkzeug - 127.0.0.1 - - [08/May/2024 19:32:33] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:32:39,144 - werkzeug - 127.0.0.1 - - [08/May/2024 19:32:39] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:46:31,479 - werkzeug - 127.0.0.1 - - [08/May/2024 19:46:31] "[33mGET /telegram-bot/vreatej-bot/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:46:37,486 - werkzeug - 127.0.0.1 - - [08/May/2024 19:46:37] "[33mGET /telegram-bot/vreate-bot/jhj HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:46:44,338 - werkzeug - 127.0.0.1 - - [08/May/2024 19:46:44] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:47:02,153 - werkzeug - 127.0.0.1 - - [08/May/2024 19:47:02] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:53:56,086 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:53:56,086 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:53:56,087 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:53:56,566 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:53:56,566 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:54:21,533 - werkzeug - 127.0.0.1 - - [08/May/2024 19:54:21] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:54:26,080 - werkzeug - 127.0.0.1 - - [08/May/2024 19:54:26] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-08 19:54:29,338 - werkzeug - 127.0.0.1 - - [08/May/2024 19:54:29] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:54:33,355 - werkzeug - 127.0.0.1 - - [08/May/2024 19:54:33] "GET /sitemap.xml HTTP/1.1" 200 -
+INFO - 2024-05-08 19:55:20,078 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:55:20,078 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:55:20,079 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:55:20,561 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:55:20,561 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:55:24,709 - werkzeug - 127.0.0.1 - - [08/May/2024 19:55:24] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:55:30,145 - werkzeug - 127.0.0.1 - - [08/May/2024 19:55:30] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:55:35,538 - werkzeug - 127.0.0.1 - - [08/May/2024 19:55:35] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-08 19:55:45,533 - werkzeug - 127.0.0.1 - - [08/May/2024 19:55:45] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:55:47,676 - werkzeug - 127.0.0.1 - - [08/May/2024 19:55:47] "GET /sitemap.xml HTTP/1.1" 200 -
+INFO - 2024-05-08 19:56:10,095 - werkzeug - 127.0.0.1 - - [08/May/2024 19:56:10] "[35m[1mGET /site/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:56:13,031 - werkzeug - 127.0.0.1 - - [08/May/2024 19:56:13] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-08 19:56:16,656 - werkzeug - 127.0.0.1 - - [08/May/2024 19:56:16] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:58:44,591 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:58:44,591 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:58:44,592 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:58:45,096 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:58:45,096 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:58:48,513 - werkzeug - 127.0.0.1 - - [08/May/2024 19:58:48] "[33mGET /telegram-bot/vreate-bot/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-08 19:58:50,186 - werkzeug - 127.0.0.1 - - [08/May/2024 19:58:50] "[35m[1mGET /telegram-bot/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:58:50,387 - werkzeug - 127.0.0.1 - - [08/May/2024 19:58:50] "[35m[1mGET /telegram-bot/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:58:51,173 - werkzeug - 127.0.0.1 - - [08/May/2024 19:58:51] "[35m[1mGET /telegram-bot/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-08 19:58:51,228 - werkzeug - 127.0.0.1 - - [08/May/2024 19:58:51] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:58:51,228 - werkzeug - 127.0.0.1 - - [08/May/2024 19:58:51] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:58:51,260 - werkzeug - 127.0.0.1 - - [08/May/2024 19:58:51] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:58:51,328 - werkzeug - 127.0.0.1 - - [08/May/2024 19:58:51] "[36mGET /telegram-bot/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-08 19:59:32,090 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 19:59:32,090 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 19:59:32,091 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 19:59:32,570 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 19:59:32,570 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 19:59:34,812 - werkzeug - 127.0.0.1 - - [08/May/2024 19:59:34] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:59:41,230 - werkzeug - 127.0.0.1 - - [08/May/2024 19:59:41] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:59:43,557 - werkzeug - 127.0.0.1 - - [08/May/2024 19:59:43] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:59:52,784 - werkzeug - 127.0.0.1 - - [08/May/2024 19:59:52] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-08 19:59:54,443 - werkzeug - 127.0.0.1 - - [08/May/2024 19:59:54] "GET /sitemap.xml HTTP/1.1" 200 -
+INFO - 2024-05-08 20:00:08,041 - werkzeug - 127.0.0.1 - - [08/May/2024 20:00:08] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-08 20:00:10,780 - werkzeug - 127.0.0.1 - - [08/May/2024 20:00:10] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 20:09:41,306 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 20:09:41,307 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 20:09:41,308 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 20:09:41,787 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 20:09:41,788 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 20:09:44,868 - werkzeug - 127.0.0.1 - - [08/May/2024 20:09:44] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 20:09:58,866 - werkzeug - 127.0.0.1 - - [08/May/2024 20:09:58] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 20:09:59,404 - werkzeug - 127.0.0.1 - - [08/May/2024 20:09:59] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 20:10:23,913 - werkzeug - 127.0.0.1 - - [08/May/2024 20:10:23] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 20:10:40,345 - werkzeug - 127.0.0.1 - - [08/May/2024 20:10:40] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-08 20:10:55,811 - werkzeug - 127.0.0.1 - - [08/May/2024 20:10:55] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 20:10:57,583 - werkzeug - 127.0.0.1 - - [08/May/2024 20:10:57] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 20:15:34,120 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 20:15:34,121 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 20:15:34,121 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 20:15:34,604 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 20:15:34,604 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 20:15:38,534 - werkzeug - 127.0.0.1 - - [08/May/2024 20:15:38] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 20:43:33,982 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 20:43:33,982 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 20:43:33,983 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 20:43:34,506 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 20:43:34,506 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 20:43:39,519 - werkzeug - 127.0.0.1 - - [08/May/2024 20:43:39] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 20:43:45,541 - werkzeug - 127.0.0.1 - - [08/May/2024 20:43:45] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 20:43:53,115 - werkzeug - 127.0.0.1 - - [08/May/2024 20:43:53] "GET /telegram-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 20:44:00,667 - werkzeug - 127.0.0.1 - - [08/May/2024 20:44:00] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 21:03:30,359 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 21:03:30,359 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 21:03:30,360 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 21:03:30,917 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 21:03:30,918 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 21:03:34,502 - werkzeug - 127.0.0.1 - - [08/May/2024 21:03:34] "GET /telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 21:03:45,528 - werkzeug - 127.0.0.1 - - [08/May/2024 21:03:45] "GET /api/telegram-bot/vreate-bot/ HTTP/1.1" 200 -
+INFO - 2024-05-08 21:06:43,738 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-08 21:06:43,739 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-08 21:06:43,740 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-08 21:06:44,261 - werkzeug -  * Debugger is active!
+INFO - 2024-05-08 21:06:44,261 - werkzeug -  * Debugger PIN: 111-688-893
+INFO - 2024-05-08 21:06:47,410 - werkzeug - 127.0.0.1 - - [08/May/2024 21:06:47] "GET /api/telegram-bot/vreate-bot/ HTTP/1.1" 200 -
