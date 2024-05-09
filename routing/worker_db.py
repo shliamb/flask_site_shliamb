@@ -143,3 +143,34 @@ def update_data_2(id, data):
         except Exception as e:
             logging.error(f"Error: update data to table page_2: {e}")
             return False
+
+
+# get_sitemap_db
+# def get_sitemap_db():
+#     with app.app_context():
+#         data = None
+
+#         query = (
+#         select(Page_main, Page_1, Page_2)
+#         .where(Page_1.publish == True)
+#         .where(Page_2.publish == True)
+#         )
+
+#         result = db.session.execute(query)
+#         data = result.scalars().all()
+#         #return data.serialize() if data else None
+#         return data #[item.serialize() for item in data]
+
+def get_sitemap_db():
+    with app.app_context():
+        data_main = db.session.query(Page_main).all()
+        data_page_1 = db.session.query(Page_1).filter_by(publish=True).all()
+        data_page_2 = db.session.query(Page_2).filter_by(publish=True).all()
+
+        # Объединение данных в один список, если это возможно
+        # или обработка каждого набора данных отдельно
+        return {
+            'main': [item.serialize() for item in data_main],
+            'page_1': [item.serialize() for item in data_page_1],
+            'page_2': [item.serialize() for item in data_page_2],
+        }

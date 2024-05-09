@@ -5,7 +5,7 @@ sys.path.append(root_path)
 
 # Теперь мы можем импортировать worker_db из api
 from routing.worker_db import read_data_main, write_data_main, update_data_main,\
-      write_data_1, read_data_1, write_data_2, read_data_2
+      write_data_1, read_data_1, write_data_2, read_data_2, get_sitemap_db
 
 
 
@@ -41,17 +41,18 @@ from routing.worker_db import read_data_main, write_data_main, update_data_main,
 
 
 # Update Page_main:
+# page_1 = "telegram-bot"
+# page_2 = "vreate-bot-2"
 
-# id = "https://shliamb.ru"
+# # # id = "site"
 
-# data = {
-#     "id": "1",
-#     "title": "Первая страница, а че.. не не, все "
-# }
 
-# ass = update_data_main(id, data)
-# print(ass)
+# data = read_data_2(page_1, page_2)
 
+# if data:
+#     print(data)
+# else:
+#     print("Такой страницы нэту")
 
 
 
@@ -105,15 +106,43 @@ from routing.worker_db import read_data_main, write_data_main, update_data_main,
 # id = "site-page"
 # id = "vreate-bot-2"
 
-page_1 = "telegram-bot"
-page_2 = "vreate-bot-2"
+# page_1 = "telegram-bot"
+# page_2 = "vreate-bot-2"
 
-# # id = "site"
+# # # id = "site"
 
 
-data = read_data_2(page_1, page_2)
+# data = read_data_2(page_1, page_2)
 
-if data:
-    print(data)
-else:
-    print("Такой страницы нэту")
+# if data:
+#     print(data)
+# else:
+#     print("Такой страницы нэту")
+
+
+
+
+
+
+
+
+
+
+
+# Read Page_main:
+#data = get_sitemap_db()
+
+# Page_main
+# page_main = data["main"][0]
+# print(f"https://{page_main['id']}")
+
+# # All Page_1
+# data_1 = data["page_1"]
+# for n in data_1:
+#     print(f"https://shliamb/{n['id']}")
+
+# # All Page_2
+# data_2 = data["page_2"]
+# for n in data_2:
+#     print(f"https://shliamb/{n['page_1_id']}/{n['id']}")
+

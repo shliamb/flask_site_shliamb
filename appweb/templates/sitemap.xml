@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+    <loc>{{ data.main_url }}</loc>
+    <lastmod>{{ data.main_date }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+</url>
+{% for page in data.page_1 %}
+    <url>
+        <loc>{{ page.id }}</loc>
+        <lastmod>{{ page.date_update }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+{% endfor %}
+{% for page in data.page_2 %}
+    <url>
+        <loc>{{ page }}</loc>
+        <lastmod>{{ data.main_date }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.0</priority>
+    </url>
+{% endfor %}
+
+</urlset>
