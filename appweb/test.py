@@ -5,7 +5,7 @@ sys.path.append(root_path)
 
 # Теперь мы можем импортировать worker_db из api
 from routing.worker_db import read_data_main, write_data_main, update_data_main,\
-      write_data_1, read_data_1, write_data_2, read_data_2, get_sitemap_db
+      write_data_1, read_data_1, write_data_2, read_data_2, get_sitemap_db, read_menu, write_menu
 
 
 
@@ -25,6 +25,19 @@ def day_utcnow(time_correction=None) -> datetime:
     day = datetime.strptime(day_str, '%Y-%m-%d %H:%M:%S')
     # print("info: Getting the day and time from the server")
     return day or None
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #### Page_main ####
 
@@ -84,12 +97,26 @@ def day_utcnow(time_correction=None) -> datetime:
 
 # data = {
 #     "id": "site",
+#     "url_site": "shliambur.ru",
 #     "title": "Title - сайты",
 #     "seo_title": "seo_title - сайты",
 #     "seo_description": "seo_description - сайты",
 #     "seo_keyword": "seo_keyword - сайты",
 #     "text_body": "text_body - текст страницы",
 #     "date_update": date,
+#     'priority': 0.9
+# }
+
+# data = {
+#     "id": "bot",
+#     "url_site": "shliambur.ru",
+#     "title": "Title - bot",
+#     "seo_title": "seo_title - bot",
+#     "seo_description": "seo_description - bot",
+#     "seo_keyword": "seo_keyword - bot",
+#     "text_body": "text_body - текст страницы bot",
+#     "date_update": date,
+#     'priority': 0.9
 # }
 
 # ass = write_data_1(data)
@@ -115,15 +142,29 @@ def day_utcnow(time_correction=None) -> datetime:
 # date = day_utcnow()
 
 # data = {
-#     'id': "bot-create2",
-#     'title': "title - bot-create2",
-#     "seo_title": "seo_title - bot-create2",
-#     "seo_description": "seo_description - bot-create2",
-#     "seo_keyword": "seo_keyword - bot-create2",
-#     "text_body": "text_body - bot-create2",
+#     'id': "bot-create",
+#     "url_site": "shliambur.ru",
+#     'title': "title - bot-create",
+#     "seo_title": "seo_title - bot-create",
+#     "seo_description": "seo_description - bot-create",
+#     "seo_keyword": "seo_keyword - bot-create",
+#     "text_body": "text_body - bot-create",
 #     "date_update": date,
-#     #'page_1_id': "site",
 #     'page_1_id': "bot",
+#     'priority': 0.8
+# }
+
+# data = {
+#     'id': "site-create",
+#     "url_site": "shliambur.ru",
+#     'title': "title - site-create",
+#     "seo_title": "seo_title - site-create",
+#     "seo_description": "seo_description - site-create",
+#     "seo_keyword": "seo_keyword - site-create",
+#     "text_body": "text_body - site-create",
+#     "date_update": date,
+#     'page_1_id': "site",
+#     'priority': 0.8
 # }
 
 # ass = write_data_2(data)
@@ -159,7 +200,7 @@ def day_utcnow(time_correction=None) -> datetime:
 
 
 
-# Read Page_main:
+# Read 
 #data = get_sitemap_db()
 
 # Page_main
@@ -189,8 +230,56 @@ def day_utcnow(time_correction=None) -> datetime:
 
 
 
-def main_url(id=1): # Site - 1 nomber
-    page_data = read_data_main(id)
-    return page_data.get("url_site") if page_data else None
+# def main_url(id=1): # Site - 1 nomber
+#     page_data = read_data_main(id)
+#     return page_data.get("url_site") if page_data else None
 
-print(main_url())
+# print(main_url())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### MENU ####
+
+# READE DATA MENU
+#
+# data = read_menu()
+# for n in data:
+#     print(n.get("title"))
+#print(data)
+
+
+
+# WRITE DATA MENU
+#
+# data = {
+#     'url_site': "shliamb.ru",
+#     'main_page': "bot",
+#     'secondary_page': "bot-create2",
+#     'title': "Страница bot-create2",
+#     # 'count_2_page': ,
+#     # 'count_comments': ,
+#     # 'publish': self.publish,
+#     # 'date_create': self.date_create,
+#     # 'date_update': self.date_update,
+# }
+
+
+# res = write_menu(data)
+# print(res)

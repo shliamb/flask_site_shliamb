@@ -8,7 +8,7 @@ import logging
 logging.basicConfig(level=logging.INFO, filename='./routing/log/api.log', filemode='a', format='%(levelname)s - %(asctime)s - %(name)s - %(message)s',) 
 #### Flask ####
 from flask import Blueprint, jsonify, request
-from routing.worker_db import read_data_main, read_data_1, read_data_2
+from routing.worker_db import read_data_main, read_data_1, read_data_2, read_menu
 
 
 api_blueprint = Blueprint('api', __name__)
@@ -26,7 +26,6 @@ def get_page_main():
     else:
         return jsonify({'error': 'Страница не найдена'}), 404
 
-
 @api_blueprint.route('/<page_1>/', methods=['GET'])
 def get_page_1(page_1):
     page_data = read_data_1(page_1)
@@ -35,7 +34,6 @@ def get_page_1(page_1):
     else:
         return jsonify({'error': 'Страница не найдена'}), 404
 
-
 @api_blueprint.route('/<page_1>/<page_2>/', methods=['GET'])
 def get_page_2(page_1, page_2):
     page_data = read_data_2(page_1, page_2)
@@ -43,4 +41,11 @@ def get_page_2(page_1, page_2):
         return jsonify(page_data)
     else:
         return jsonify({'error': 'Страница не найдена'}), 404
-        
+
+@api_blueprint.route('/menu/', methods=['GET'])
+def get_menu():
+    page_data = read_menu()
+    if page_data:
+        return jsonify(page_data)
+    else:
+        return jsonify({'error': 'Страница не найдена'}), 404

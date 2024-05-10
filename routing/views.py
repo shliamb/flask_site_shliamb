@@ -8,38 +8,49 @@ import logging
 logging.basicConfig(level=logging.INFO, filename='./routing/log/views.log', filemode='a', format='%(levelname)s - %(asctime)s - %(name)s - %(message)s',) 
 #### Flask ####
 from flask import Blueprint, Response, jsonify, render_template, request
-from routing.worker_db import read_data_main, read_data_1, read_data_2, get_sitemap_db
+from routing.worker_db import read_data_main, read_data_1, read_data_2, get_sitemap_db, read_menu
 
 
 views_blueprint = Blueprint('views', __name__)
 
 
 
-# GET MAIN URL
-#
-def main_url(id=1) -> str: # Site - 1 nomber
-    page_data = read_data_main(id)
-    return page_data.get("url_site") if page_data else None
-
-
 # MENU
 #
-def munu():
-   pass
-
-
-
+def get_menu():
+    data = read_menu()
+    # for n in data:
+    #     print(n.get("title"))
+    return data
 
 # ROUTED MAIN PAGE
 @views_blueprint.route('/', methods=['GET'])
 def get_page_main():
     page_data = read_data_main(id=1)
+    menu = get_menu()
     if page_data:
-        return render_template("main.html", data=page_data)
+        return render_template("main.html", data=page_data, menu=menu)
     else:
         return render_template("error.html", message="Страница не найдена"), 404
 
+# ROUTED 1st PAGE
+@views_blueprint.route('/<page_1>/', methods=['GET'])
+def get_page_1(page_1):
+    page_data = read_data_1(page_1)
+    if page_data:
+        return render_template('page_1.html', data=page_data)
+    else:
+        return render_template('error.html', message='Страница не найдена'), 404 
 
+# ROUTED 2 PAGE
+@views_blueprint.route('/<page_1>/<page_2>/', methods=['GET'])
+def get_page_2(page_1, page_2):
+    page_data = read_data_2(page_1, page_2)
+    if page_data:
+        return render_template('page_2.html', data=page_data)
+    else:
+        return render_template('error.html', message='Страница не найдена'), 404 
+        
 # ROUTED and GENERATION SITEMAP
 @views_blueprint.route('/sitemap.xml', methods=['GET'])
 def get_sitemap():
@@ -76,27 +87,5 @@ def get_sitemap():
         return response
     else:
         return render_template("error.html", message="There is no data to generate a site map, sorry."), 404 
-
-
-# ROUTED 1st PAGE
-@views_blueprint.route('/<page_1>/', methods=['GET'])
-def get_page_1(page_1):
-    url = main_url()
-    page_data = read_data_1(page_1)
-    if page_data:
-        return render_template('page_1.html', data=page_data, main_url=url)
-    else:
-        return render_template('error.html', message='Страница не найдена'), 404 
-
-# ROUTED 2 PAGE
-@views_blueprint.route('/<page_1>/<page_2>/', methods=['GET'])
-def get_page_2(page_1, page_2):
-    url = main_url()
-    page_data = read_data_2(page_1, page_2)
-    if page_data:
-        return render_template('page_2.html', data=page_data, main_url=url)
-    else:
-        return render_template('error.html', message='Страница не найдена'), 404 
-        
 
 

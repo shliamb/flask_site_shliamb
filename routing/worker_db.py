@@ -12,7 +12,7 @@ from flask import Flask
 import sqlalchemy
 from sqlalchemy import select, insert, update, extract, join, func
 #### Modules ####
-from routing.models import db, Page_main, Page_1, Page_2
+from routing.models import db, Page_main, Page_1, Page_2, Menu
 from keys import user_db, paswor_db
 
 
@@ -145,6 +145,59 @@ def update_data_2(id, data):
             return False
 
 
+
+
+
+
+#### MENU ####
+#
+# Read data Menu
+# def read_menu():
+#     with app.app_context():
+#         data = None
+#         query = select(Menu)
+#         result = db.session.execute(query)
+#         data = result.scalars().all()
+#         return data.serialize() if data else None
+
+def read_menu():
+    with app.app_context():
+        query = select(Menu)
+        result = db.session.execute(query)
+        menu_items = result.scalars().all()
+        return [item.serialize() for item in menu_items] if menu_items else None
+
+# Write data Menu
+def write_menu(data):
+    with app.app_context():
+        try:
+            db.create_all()
+            query = insert(Menu).values(**data)
+            db.session.execute(query)
+            db.session.commit()
+            return True
+        except Exception as e:
+            logging.error(f"Error: write data to table menu: {e}")
+            return False
+
+# Update data Menu
+def update_menu(id :int, data):
+    with app.app_context():
+        try:
+            query = update(Menu).where(Menu.id == id).values(**data)
+            db.session.execute(query)
+            db.session.commit()
+            return True
+        except Exception as e:
+            logging.error(f"Error: update data to table menu: {e}")
+            return False
+
+
+
+
+
+
+
 # Get data to genereted sitemap.xml
 def get_sitemap_db():
     with app.app_context():
@@ -152,8 +205,6 @@ def get_sitemap_db():
         data_page_1 = db.session.query(Page_1).filter_by(publish=True).all()
         data_page_2 = db.session.query(Page_2).filter_by(publish=True).all()
 
-        # Объединение данных в один список, если это возможно
-        # или обработка каждого набора данных отдельно
         return {
             'main': [item.serialize() for item in data_main],
             'page_1': [item.serialize() for item in data_page_1],
