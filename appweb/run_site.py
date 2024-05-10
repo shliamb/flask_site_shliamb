@@ -7,7 +7,7 @@ sys.path.append(root_path)
 import logging
 logging.basicConfig(level=logging.INFO, filename='./appweb/log/appweb.log', filemode='a', format='%(levelname)s - %(asctime)s - %(name)s - %(message)s',) 
 #### Flask ####
-from flask import Flask, request, render_template
+from flask import Flask
 #### Modules ####
 from routing.api import api_blueprint
 from routing.views import views_blueprint

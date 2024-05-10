@@ -8,7 +8,7 @@ db = SQLAlchemy()
 
 # APPWEB
 #
-# Главная страница с настройками всего сайта и параметрами самой страницы
+# The main page with the settings of the entire site and the parameters of the page itself
 class Page_main(db.Model):
     id = db.Column(db.Integer, primary_key=True, default=1, nullable=False, index=True) # just 1
     url_site = db.Column(db.String(100), nullable=False, index=True) # site.ru or com
@@ -22,8 +22,7 @@ class Page_main(db.Model):
     seo_keyword = db.Column(db.String(500), nullable=True, index=True)
     text_body = db.Column(db.String(5000), nullable=True, index=True)
     id_who_changed = db.Column(db.BigInteger, nullable=True)
-    time_zone = +3 # Убрать нахуй, бес попутал, а ниже открыть
-    # time_zone = db.Column(db.Integer, default=+3, nullable=False, index=True)
+    time_zone = db.Column(db.Integer, default=+3, nullable=False, index=True)
     views = db.Column(db.Integer, nullable=True)
     publish = db.Column(db.Boolean, default=True, nullable=False, index=True)
     date_create = db.Column(db.DateTime, nullable=True)
@@ -54,9 +53,10 @@ class Page_main(db.Model):
             'priority': self.priority
         }
 
-# Страницы первого порядка id ключ - это url страницы, праметры и текст
+# The first-order page id key is the page url, parameters, and text
 class Page_1(db.Model):
     id = db.Column(db.String(100), nullable=False, primary_key=True, index=True, unique=True) # url page_1
+    url_site = db.Column(db.String(100), nullable=False, index=True) # site.ru or com
     title = db.Column(db.String(1000), nullable=True, index=True)
     seo_title = db.Column(db.String(1000), nullable=True, index=True)
     seo_description = db.Column(db.String(1000), nullable=True, index=True)
@@ -75,6 +75,7 @@ class Page_1(db.Model):
     def serialize(self):
         return {
             'id': self.id,
+            'url_site': self.url_site,
             'title': self.title,
             'seo_title': self.seo_title,
             'seo_description': self.seo_description,
@@ -89,9 +90,10 @@ class Page_1(db.Model):
             'priority': self.priority
         }
 
-# Страницы второго порядка
+# Pages of the second order
 class Page_2(db.Model):
     id = db.Column(db.String(100), nullable=False, primary_key=True, index=True, unique=True) # url page_2
+    url_site = db.Column(db.String(100), nullable=False, index=True) # site.ru or com
     title = db.Column(db.String(1000), nullable=True, index=True)
     seo_title = db.Column(db.String(1000), nullable=True, index=True)
     seo_description = db.Column(db.String(1000), nullable=True, index=True)
@@ -111,6 +113,7 @@ class Page_2(db.Model):
     def serialize(self):
         return {
             'id': self.id,
+            'url_site': self.url_site,
             'title': self.title,
             'seo_title': self.seo_title,
             'seo_description': self.seo_description,
@@ -125,6 +128,36 @@ class Page_2(db.Model):
             'changefreq': self.changefreq,
             'priority': self.priority
         }
+
+# MENU
+class Menu(db.Model):
+    id = db.Column(db.BigInteger, primary_key=True, unique=True, nullable=False) # id menu
+    url_site = db.Column(db.String(100), nullable=False, index=True) # site.ru or com
+    main_page = db.Column(db.String(100), nullable=True, index=True)
+    secondary_page = db.Column(db.String(100), nullable=True, index=True)
+    title = db.Column(db.String(1000), nullable=True, index=True)
+    count_2_page = db.Column(db.BigInteger, nullable=True)
+    count_comments = db.Column(db.Integer, nullable=True)
+    publish = db.Column(db.Boolean, default=True, nullable=False, index=True)
+    date_create = db.Column(db.DateTime, nullable=True)
+    date_update = db.Column(db.DateTime, nullable=True)
+####
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'url_site': self.url_site,
+            'main_page': self.main_page,
+            'secondary_page': self.secondary_page,
+            'title': self.title,
+            'count_2_page': self.count_2_page,
+            'count_comments': self.count_comments,
+            'publish': self.publish,
+            'date_create': self.date_create,
+            'date_update': self.date_update,
+        }
+
+
 
 # Комментарии на страницах второго порядка page_2_id - url родителя комментария
 class Comments(db.Model):
@@ -145,18 +178,7 @@ class Comments(db.Model):
 ####
     page_2_id = db.Column(db.String(100), db.ForeignKey('page_2.id'), nullable=False) # Страница 2 порядка после главной где расспологается коммент
 
-# Данные для сбора карты сайта
-class Sitemap(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
 
-    page_main_id = db.Column(db.String(100), nullable=True)
-    date_main = db.Column(db.DateTime, nullable=True)
-
-    page_1_id = db.Column(db.String(100), nullable=True)
-    date_page_1 = db.Column(db.DateTime, nullable=True)
-
-    page_2_id = db.Column(db.String(100), nullable=True, index=True, unique=True)
-    date_page_2 = db.Column(db.DateTime, nullable=True)
 
 
 

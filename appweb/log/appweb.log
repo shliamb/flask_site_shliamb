@@ -1489,3 +1489,76 @@ INFO - 2024-05-10 21:49:46,562 - werkzeug - 127.0.0.1 - - [10/May/2024 21:49:46]
 INFO - 2024-05-10 21:49:46,618 - werkzeug - 127.0.0.1 - - [10/May/2024 21:49:46] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
 INFO - 2024-05-10 21:49:49,529 - werkzeug - 127.0.0.1 - - [10/May/2024 21:49:49] "GET /site/site-new2/ HTTP/1.1" 200 -
 INFO - 2024-05-10 21:49:49,578 - werkzeug - 127.0.0.1 - - [10/May/2024 21:49:49] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-10 22:30:56,108 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-10 22:30:56,108 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-10 22:30:56,109 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-10 22:30:56,646 - werkzeug -  * Debugger is active!
+INFO - 2024-05-10 22:30:56,646 - werkzeug -  * Debugger PIN: 136-860-333
+INFO - 2024-05-10 22:31:07,875 - werkzeug - 127.0.0.1 - - [10/May/2024 22:31:07] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-10 22:31:07,903 - werkzeug - 127.0.0.1 - - [10/May/2024 22:31:07] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-10 22:31:12,879 - werkzeug - 127.0.0.1 - - [10/May/2024 22:31:12] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-10 22:45:28,192 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-10 22:45:28,192 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-10 22:45:28,194 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-10 22:45:28,723 - werkzeug -  * Debugger is active!
+INFO - 2024-05-10 22:45:28,723 - werkzeug -  * Debugger PIN: 136-860-333
+INFO - 2024-05-10 22:45:31,406 - werkzeug - 127.0.0.1 - - [10/May/2024 22:45:31] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-10 22:45:31,460 - werkzeug - 127.0.0.1 - - [10/May/2024 22:45:31] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-10 22:45:35,774 - werkzeug - 127.0.0.1 - - [10/May/2024 22:45:35] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-10 22:45:35,829 - werkzeug - 127.0.0.1 - - [10/May/2024 22:45:35] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-10 23:02:56,418 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-10 23:02:56,418 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-10 23:02:56,419 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-10 23:02:56,938 - werkzeug -  * Debugger is active!
+INFO - 2024-05-10 23:02:56,939 - werkzeug -  * Debugger PIN: 136-860-333
+INFO - 2024-05-10 23:03:04,109 - werkzeug - 127.0.0.1 - - [10/May/2024 23:03:04] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-10 23:03:04,160 - werkzeug - 127.0.0.1 - - [10/May/2024 23:03:04] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-10 23:03:15,391 - werkzeug - 127.0.0.1 - - [10/May/2024 23:03:15] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-10 23:03:15,431 - werkzeug - 127.0.0.1 - - [10/May/2024 23:03:15] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-10 23:03:15,534 - werkzeug - 127.0.0.1 - - [10/May/2024 23:03:15] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-10 23:03:15,576 - werkzeug - 127.0.0.1 - - [10/May/2024 23:03:15] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-10 23:03:25,770 - werkzeug - 127.0.0.1 - - [10/May/2024 23:03:25] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-10 23:03:25,817 - werkzeug - 127.0.0.1 - - [10/May/2024 23:03:25] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-10 23:03:26,497 - werkzeug - 127.0.0.1 - - [10/May/2024 23:03:26] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-10 23:03:26,532 - werkzeug - 127.0.0.1 - - [10/May/2024 23:03:26] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-10 23:04:04,537 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-10 23:04:04,537 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-10 23:04:04,538 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-10 23:04:05,061 - werkzeug -  * Debugger is active!
+INFO - 2024-05-10 23:04:05,062 - werkzeug -  * Debugger PIN: 136-860-333
+INFO - 2024-05-10 23:04:06,252 - werkzeug - 127.0.0.1 - - [10/May/2024 23:04:06] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-10 23:04:06,306 - werkzeug - 127.0.0.1 - - [10/May/2024 23:04:06] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-10 23:04:28,486 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-10 23:04:28,486 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-10 23:04:28,487 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-10 23:04:29,003 - werkzeug -  * Debugger is active!
+INFO - 2024-05-10 23:04:29,003 - werkzeug -  * Debugger PIN: 136-860-333
+INFO - 2024-05-10 23:04:31,254 - werkzeug - 127.0.0.1 - - [10/May/2024 23:04:31] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-10 23:07:20,093 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-10 23:07:20,093 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-10 23:07:20,094 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-10 23:07:20,612 - werkzeug -  * Debugger is active!
+INFO - 2024-05-10 23:07:20,613 - werkzeug -  * Debugger PIN: 136-860-333
+INFO - 2024-05-10 23:07:32,250 - werkzeug - 127.0.0.1 - - [10/May/2024 23:07:32] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-10 23:07:32,744 - werkzeug - 127.0.0.1 - - [10/May/2024 23:07:32] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-10 23:07:37,517 - werkzeug - 127.0.0.1 - - [10/May/2024 23:07:37] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-10 23:07:37,573 - werkzeug - 127.0.0.1 - - [10/May/2024 23:07:37] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-10 23:07:46,474 - werkzeug - 127.0.0.1 - - [10/May/2024 23:07:46] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-10 23:07:46,521 - werkzeug - 127.0.0.1 - - [10/May/2024 23:07:46] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-10 23:07:46,690 - werkzeug - 127.0.0.1 - - [10/May/2024 23:07:46] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-10 23:07:46,745 - werkzeug - 127.0.0.1 - - [10/May/2024 23:07:46] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-10 23:13:15,779 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-10 23:13:15,779 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-10 23:13:15,780 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-10 23:13:16,288 - werkzeug -  * Debugger is active!
+INFO - 2024-05-10 23:13:16,289 - werkzeug -  * Debugger PIN: 136-860-333
+INFO - 2024-05-10 23:13:19,721 - werkzeug - 127.0.0.1 - - [10/May/2024 23:13:19] "GET /sitemap.xml HTTP/1.1" 200 -
+INFO - 2024-05-10 23:13:20,368 - werkzeug - 127.0.0.1 - - [10/May/2024 23:13:20] "GET /sitemap.xml HTTP/1.1" 200 -
+INFO - 2024-05-10 23:13:20,565 - werkzeug - 127.0.0.1 - - [10/May/2024 23:13:20] "GET /sitemap.xml HTTP/1.1" 200 -

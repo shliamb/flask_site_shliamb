@@ -14,15 +14,30 @@ from routing.worker_db import read_data_main, read_data_1, read_data_2, get_site
 views_blueprint = Blueprint('views', __name__)
 
 
+
+# GET MAIN URL
+#
+def main_url(id=1) -> str: # Site - 1 nomber
+    page_data = read_data_main(id)
+    return page_data.get("url_site") if page_data else None
+
+
+# MENU
+#
+def munu():
+   pass
+
+
+
+
 # ROUTED MAIN PAGE
 @views_blueprint.route('/', methods=['GET'])
 def get_page_main():
-    id = 1
-    page_data = read_data_main(id)
+    page_data = read_data_main(id=1)
     if page_data:
         return render_template("main.html", data=page_data)
     else:
-        return render_template("error.html", message="Страница не найдена"), 404 
+        return render_template("error.html", message="Страница не найдена"), 404
 
 
 # ROUTED and GENERATION SITEMAP
@@ -33,7 +48,7 @@ def get_sitemap():
             # main
         main = data["main"][0]
         main_url = f"https://{main['url_site']}"
-        main_date = main['date_update']
+        main_date = main.get('date_update')
         changefreq = main['changefreq']
         priority = main['priority']
             # page_1
@@ -66,18 +81,20 @@ def get_sitemap():
 # ROUTED 1st PAGE
 @views_blueprint.route('/<page_1>/', methods=['GET'])
 def get_page_1(page_1):
+    url = main_url()
     page_data = read_data_1(page_1)
     if page_data:
-        return render_template('page_1.html', data=page_data)
+        return render_template('page_1.html', data=page_data, main_url=url)
     else:
         return render_template('error.html', message='Страница не найдена'), 404 
 
 # ROUTED 2 PAGE
 @views_blueprint.route('/<page_1>/<page_2>/', methods=['GET'])
 def get_page_2(page_1, page_2):
+    url = main_url()
     page_data = read_data_2(page_1, page_2)
     if page_data:
-        return render_template('page_2.html', data=page_data)
+        return render_template('page_2.html', data=page_data, main_url=url)
     else:
         return render_template('error.html', message='Страница не найдена'), 404 
         

@@ -178,11 +178,19 @@ def day_utcnow(time_correction=None) -> datetime:
 
 
 
-class MyClass():
-    pass
+# class MyClass():
+#     pass
 
-myclass = MyClass()
+# myclass = MyClass()
 
 
-print(type(myclass))
+# print(type(myclass))
 
+
+
+
+def main_url(id=1): # Site - 1 nomber
+    page_data = read_data_main(id)
+    return page_data.get("url_site") if page_data else None
+
+print(main_url())
