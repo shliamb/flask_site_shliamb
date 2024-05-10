@@ -145,22 +145,7 @@ def update_data_2(id, data):
             return False
 
 
-# get_sitemap_db
-# def get_sitemap_db():
-#     with app.app_context():
-#         data = None
-
-#         query = (
-#         select(Page_main, Page_1, Page_2)
-#         .where(Page_1.publish == True)
-#         .where(Page_2.publish == True)
-#         )
-
-#         result = db.session.execute(query)
-#         data = result.scalars().all()
-#         #return data.serialize() if data else None
-#         return data #[item.serialize() for item in data]
-
+# Get data to genereted sitemap.xml
 def get_sitemap_db():
     with app.app_context():
         data_main = db.session.query(Page_main).all()

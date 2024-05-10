@@ -12,15 +12,33 @@ from routing.worker_db import read_data_main, write_data_main, update_data_main,
 
 
 
+from datetime import datetime, timezone, timedelta
 
+# GET DAY AND TIME
+def day_utcnow(time_correction=None) -> datetime:
+    if time_correction is None:
+        time_correction = +3 # Moscow
+    utc_zone = timezone.utc
+    a = datetime.now(timezone.utc).replace(tzinfo=utc_zone)
+    a = a + timedelta(hours=time_correction)
+    day_str = a.strftime("%Y-%m-%d %H:%M:%S")
+    day = datetime.strptime(day_str, '%Y-%m-%d %H:%M:%S')
+    # print("info: Getting the day and time from the server")
+    return day or None
 
 #### Page_main ####
 
 # Write Page_main:
 #
+# date = day_utcnow()
 # data = {
-#     "id": "https://shliamb.ru",
-#     "title": "Первая страница, а че.."
+#     "id": 1,
+#     "url_site": "shliambur.ru",
+#     "title": "Title - Главная страница | Shliambur",
+#     "seo_title": "seo_title - Компания по разработке",
+#     "seo_description": "seo_description - Компания по разработке",
+#     "seo_keyword": "seo_keyword - разработка",
+#     "date_update": date,
 # }
 
 # ass = write_data_main(data)
@@ -62,9 +80,16 @@ from routing.worker_db import read_data_main, write_data_main, update_data_main,
 
 # Write Page_main:
 
+# date = day_utcnow()
+
 # data = {
 #     "id": "site",
-#     'title': "Сайт"
+#     "title": "Title - сайты",
+#     "seo_title": "seo_title - сайты",
+#     "seo_description": "seo_description - сайты",
+#     "seo_keyword": "seo_keyword - сайты",
+#     "text_body": "text_body - текст страницы",
+#     "date_update": date,
 # }
 
 # ass = write_data_1(data)
@@ -83,17 +108,22 @@ from routing.worker_db import read_data_main, write_data_main, update_data_main,
 
 
 
-
-
-
 #### Page_2 ####
 
 # Write Page_main:
 
+# date = day_utcnow()
+
 # data = {
-#     'id': "site-page",
-#     'title': "Второстепенная страница - Старница  ",
-#     'page_1_id': "site"
+#     'id': "bot-create2",
+#     'title': "title - bot-create2",
+#     "seo_title": "seo_title - bot-create2",
+#     "seo_description": "seo_description - bot-create2",
+#     "seo_keyword": "seo_keyword - bot-create2",
+#     "text_body": "text_body - bot-create2",
+#     "date_update": date,
+#     #'page_1_id': "site",
+#     'page_1_id': "bot",
 # }
 
 # ass = write_data_2(data)
@@ -145,4 +175,14 @@ from routing.worker_db import read_data_main, write_data_main, update_data_main,
 # data_2 = data["page_2"]
 # for n in data_2:
 #     print(f"https://shliamb/{n['page_1_id']}/{n['id']}")
+
+
+
+class MyClass():
+    pass
+
+myclass = MyClass()
+
+
+print(type(myclass))
 

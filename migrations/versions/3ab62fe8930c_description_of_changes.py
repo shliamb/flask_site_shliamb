@@ -1,8 +1,8 @@
-"""Initial migration
+"""Description of changes
 
-Revision ID: 4c50ea322281
+Revision ID: 3ab62fe8930c
 Revises: 
-Create Date: 2024-05-07 14:00:42.027594
+Create Date: 2024-05-10 12:15:47.496245
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '4c50ea322281'
+revision: str = '3ab62fe8930c'
 down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -32,8 +32,11 @@ def upgrade() -> None:
     sa.Column('publish', sa.Boolean(), nullable=False),
     sa.Column('date_create', sa.DateTime(), nullable=True),
     sa.Column('date_update', sa.DateTime(), nullable=True),
+    sa.Column('changefreq', sa.String(length=500), nullable=False),
+    sa.Column('priority', sa.Float(), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
+    op.create_index(op.f('ix_page_1_changefreq'), 'page_1', ['changefreq'], unique=False)
     op.create_index(op.f('ix_page_1_id'), 'page_1', ['id'], unique=True)
     op.create_index(op.f('ix_page_1_publish'), 'page_1', ['publish'], unique=False)
     op.create_index(op.f('ix_page_1_seo_description'), 'page_1', ['seo_description'], unique=False)
@@ -42,7 +45,8 @@ def upgrade() -> None:
     op.create_index(op.f('ix_page_1_text_body'), 'page_1', ['text_body'], unique=False)
     op.create_index(op.f('ix_page_1_title'), 'page_1', ['title'], unique=False)
     op.create_table('page_main',
-    sa.Column('id', sa.String(length=100), nullable=False),
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('url_site', sa.String(length=100), nullable=False),
     sa.Column('responsive', sa.Boolean(), nullable=False),
     sa.Column('lang', sa.String(length=100), nullable=False),
     sa.Column('return_code', sa.Integer(), nullable=False),
@@ -57,10 +61,13 @@ def upgrade() -> None:
     sa.Column('publish', sa.Boolean(), nullable=False),
     sa.Column('date_create', sa.DateTime(), nullable=True),
     sa.Column('date_update', sa.DateTime(), nullable=True),
+    sa.Column('changefreq', sa.String(length=500), nullable=False),
+    sa.Column('priority', sa.Float(), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
+    op.create_index(op.f('ix_page_main_changefreq'), 'page_main', ['changefreq'], unique=False)
     op.create_index(op.f('ix_page_main_comments'), 'page_main', ['comments'], unique=False)
-    op.create_index(op.f('ix_page_main_id'), 'page_main', ['id'], unique=True)
+    op.create_index(op.f('ix_page_main_id'), 'page_main', ['id'], unique=False)
     op.create_index(op.f('ix_page_main_lang'), 'page_main', ['lang'], unique=False)
     op.create_index(op.f('ix_page_main_publish'), 'page_main', ['publish'], unique=False)
     op.create_index(op.f('ix_page_main_responsive'), 'page_main', ['responsive'], unique=False)
@@ -70,6 +77,7 @@ def upgrade() -> None:
     op.create_index(op.f('ix_page_main_seo_title'), 'page_main', ['seo_title'], unique=False)
     op.create_index(op.f('ix_page_main_text_body'), 'page_main', ['text_body'], unique=False)
     op.create_index(op.f('ix_page_main_title'), 'page_main', ['title'], unique=False)
+    op.create_index(op.f('ix_page_main_url_site'), 'page_main', ['url_site'], unique=False)
     op.create_table('sitemap',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('page_main_id', sa.String(length=100), nullable=True),
@@ -93,10 +101,13 @@ def upgrade() -> None:
     sa.Column('publish', sa.Boolean(), nullable=False),
     sa.Column('date_create', sa.DateTime(), nullable=True),
     sa.Column('date_update', sa.DateTime(), nullable=True),
+    sa.Column('changefreq', sa.String(length=500), nullable=False),
+    sa.Column('priority', sa.Float(), nullable=False),
     sa.Column('page_1_id', sa.String(length=100), nullable=False),
     sa.ForeignKeyConstraint(['page_1_id'], ['page_1.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
+    op.create_index(op.f('ix_page_2_changefreq'), 'page_2', ['changefreq'], unique=False)
     op.create_index(op.f('ix_page_2_id'), 'page_2', ['id'], unique=True)
     op.create_index(op.f('ix_page_2_publish'), 'page_2', ['publish'], unique=False)
     op.create_index(op.f('ix_page_2_seo_description'), 'page_2', ['seo_description'], unique=False)
@@ -151,9 +162,11 @@ def downgrade() -> None:
     op.drop_index(op.f('ix_page_2_seo_description'), table_name='page_2')
     op.drop_index(op.f('ix_page_2_publish'), table_name='page_2')
     op.drop_index(op.f('ix_page_2_id'), table_name='page_2')
+    op.drop_index(op.f('ix_page_2_changefreq'), table_name='page_2')
     op.drop_table('page_2')
     op.drop_index(op.f('ix_sitemap_page_2_id'), table_name='sitemap')
     op.drop_table('sitemap')
+    op.drop_index(op.f('ix_page_main_url_site'), table_name='page_main')
     op.drop_index(op.f('ix_page_main_title'), table_name='page_main')
     op.drop_index(op.f('ix_page_main_text_body'), table_name='page_main')
     op.drop_index(op.f('ix_page_main_seo_title'), table_name='page_main')
@@ -165,6 +178,7 @@ def downgrade() -> None:
     op.drop_index(op.f('ix_page_main_lang'), table_name='page_main')
     op.drop_index(op.f('ix_page_main_id'), table_name='page_main')
     op.drop_index(op.f('ix_page_main_comments'), table_name='page_main')
+    op.drop_index(op.f('ix_page_main_changefreq'), table_name='page_main')
     op.drop_table('page_main')
     op.drop_index(op.f('ix_page_1_title'), table_name='page_1')
     op.drop_index(op.f('ix_page_1_text_body'), table_name='page_1')
@@ -173,5 +187,6 @@ def downgrade() -> None:
     op.drop_index(op.f('ix_page_1_seo_description'), table_name='page_1')
     op.drop_index(op.f('ix_page_1_publish'), table_name='page_1')
     op.drop_index(op.f('ix_page_1_id'), table_name='page_1')
+    op.drop_index(op.f('ix_page_1_changefreq'), table_name='page_1')
     op.drop_table('page_1')
     # ### end Alembic commands ###

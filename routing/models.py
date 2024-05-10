@@ -10,8 +10,8 @@ db = SQLAlchemy()
 #
 # Главная страница с настройками всего сайта и параметрами самой страницы
 class Page_main(db.Model):
-    id = db.Column(db.String(100), nullable=False, primary_key=True, index=True, unique=True) # 1
-    # url_site = db.Column(db.String(100), nullable=False, index=True)
+    id = db.Column(db.Integer, primary_key=True, default=1, nullable=False, index=True) # just 1
+    url_site = db.Column(db.String(100), nullable=False, index=True) # site.ru or com
     responsive = db.Column(db.Boolean, default=True, nullable=False, index=True)
     lang = db.Column(db.String(100), default="ru", nullable=False, index=True)
     return_code = db.Column(db.Integer, default=200, nullable=False, index=True)
@@ -22,16 +22,19 @@ class Page_main(db.Model):
     seo_keyword = db.Column(db.String(500), nullable=True, index=True)
     text_body = db.Column(db.String(5000), nullable=True, index=True)
     id_who_changed = db.Column(db.BigInteger, nullable=True)
-    # time_zone = +3
+    time_zone = +3 # Убрать нахуй, бес попутал, а ниже открыть
+    # time_zone = db.Column(db.Integer, default=+3, nullable=False, index=True)
     views = db.Column(db.Integer, nullable=True)
     publish = db.Column(db.Boolean, default=True, nullable=False, index=True)
     date_create = db.Column(db.DateTime, nullable=True)
     date_update = db.Column(db.DateTime, nullable=True)
+    changefreq = db.Column(db.String(500), default="monthly", nullable=False, index=True)
+    priority = db.Column(db.Float, default=1, nullable=False)
 
     def serialize(self):
         return {
             'id': self.id,
-            # 'url_site': url_site,
+            'url_site': self.url_site,
             'responsive': self.responsive,
             'lang': self.lang,
             'return_code': self.return_code,
@@ -42,11 +45,13 @@ class Page_main(db.Model):
             'seo_keyword': self.seo_keyword,
             'text_body': self.text_body,
             'id_who_changed': self.id_who_changed,
-            # 'time_zone': time_zone,
+            'time_zone': self.time_zone,
             'views': self.views,
             'publish': self.publish,
             'date_create': self.date_create,
-            'date_update': self.date_update
+            'date_update': self.date_update,
+            'changefreq': self.changefreq,
+            'priority': self.priority
         }
 
 # Страницы первого порядка id ключ - это url страницы, праметры и текст
@@ -62,6 +67,8 @@ class Page_1(db.Model):
     publish = db.Column(db.Boolean, default=True, nullable=False, index=True)
     date_create = db.Column(db.DateTime, nullable=True)
     date_update = db.Column(db.DateTime, nullable=True)
+    changefreq = db.Column(db.String(500), default="monthly", nullable=False, index=True)
+    priority = db.Column(db.Float, default=1, nullable=False)
 ####
     sessions = db.relationship('Page_2', backref='page_1', lazy=True)
 
@@ -78,6 +85,8 @@ class Page_1(db.Model):
             'publish': self.publish,
             'date_create': self.date_create,
             'date_update': self.date_update,
+            'changefreq': self.changefreq,
+            'priority': self.priority
         }
 
 # Страницы второго порядка
@@ -93,6 +102,8 @@ class Page_2(db.Model):
     publish = db.Column(db.Boolean, default=True, nullable=False, index=True)
     date_create = db.Column(db.DateTime, nullable=True)
     date_update = db.Column(db.DateTime, nullable=True)
+    changefreq = db.Column(db.String(500), default="monthly", nullable=False, index=True)
+    priority = db.Column(db.Float, default=1, nullable=False)
 ####
     page_1_id = db.Column(db.String(100), db.ForeignKey('page_1.id'), nullable=False) # Родительская страница
     sessions = db.relationship('Comments', backref='page_2', lazy=True)
@@ -111,6 +122,8 @@ class Page_2(db.Model):
             'date_create': self.date_create,
             'date_update': self.date_update,
             'page_1_id': self.page_1_id,
+            'changefreq': self.changefreq,
+            'priority': self.priority
         }
 
 # Комментарии на страницах второго порядка page_2_id - url родителя комментария
