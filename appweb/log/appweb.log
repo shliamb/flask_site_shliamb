@@ -1654,3 +1654,617 @@ INFO - 2024-05-11 02:17:48,222 - werkzeug - [31m[1mWARNING: This is a developm
 INFO - 2024-05-11 02:17:48,222 - werkzeug - [33mPress CTRL+C to quit[0m
 INFO - 2024-05-11 02:18:37,580 - werkzeug - 127.0.0.1 - - [11/May/2024 02:18:37] "GET / HTTP/1.1" 200 -
 INFO - 2024-05-11 02:18:37,645 - werkzeug - 127.0.0.1 - - [11/May/2024 02:18:37] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:00:32,505 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:00:32,506 - werkzeug - [33mPress CTRL+C to quit[0m
+ERROR - 2024-05-11 12:00:34,292 - run_site - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3300, in raw_connection
+    return self.pool.connect()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 620, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/san/Desktop/programs/flask_site_shliamb/routing/views.py", line 26, in get_page_main
+    page_data = read_data_main(id=1)
+  File "/home/san/Desktop/programs/flask_site_shliamb/routing/worker_db.py", line 36, in read_data_main
+    result = db.session.execute(query)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 778, in execute
+    return self._proxied.execute(
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2351, in execute
+    return self._execute_internal(
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2226, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2095, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3276, in connect
+    return self._connection_cls(self)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 148, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2440, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3300, in raw_connection
+    return self.pool.connect()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 620, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+INFO - 2024-05-11 12:00:34,301 - werkzeug - 127.0.0.1 - - [11/May/2024 12:00:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR - 2024-05-11 12:00:34,482 - run_site - Exception on /favicon.ico/ [GET]
+Traceback (most recent call last):
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3300, in raw_connection
+    return self.pool.connect()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 620, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/san/Desktop/programs/flask_site_shliamb/routing/views.py", line 36, in get_page_1
+    page_data = read_data_1(page_1)
+  File "/home/san/Desktop/programs/flask_site_shliamb/routing/worker_db.py", line 76, in read_data_1
+    result = db.session.execute(query)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 778, in execute
+    return self._proxied.execute(
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2351, in execute
+    return self._execute_internal(
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2226, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2095, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3276, in connect
+    return self._connection_cls(self)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 148, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2440, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3300, in raw_connection
+    return self.pool.connect()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 620, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/home/san/Desktop/programs/flask_site_shliamb/venv/lib/python3.10/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+INFO - 2024-05-11 12:00:34,483 - werkzeug - 127.0.0.1 - - [11/May/2024 12:00:34] "[35m[1mGET /favicon.ico/ HTTP/1.1[0m" 500 -
+INFO - 2024-05-11 12:00:55,066 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:00:55,066 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:00:55,067 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:00:55,551 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:00:55,657 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:00:57,187 - werkzeug - 127.0.0.1 - - [11/May/2024 12:00:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO - 2024-05-11 12:00:57,237 - werkzeug - 127.0.0.1 - - [11/May/2024 12:00:57] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:00:57,239 - werkzeug - 127.0.0.1 - - [11/May/2024 12:00:57] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:00:57,323 - werkzeug - 127.0.0.1 - - [11/May/2024 12:00:57] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:00:57,393 - werkzeug - 127.0.0.1 - - [11/May/2024 12:00:57] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:01:44,160 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:01:44,160 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:01:44,161 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:01:44,637 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:01:44,638 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:01:46,092 - werkzeug - 127.0.0.1 - - [11/May/2024 12:01:46] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:01:46,145 - werkzeug - 127.0.0.1 - - [11/May/2024 12:01:46] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:01:46,227 - werkzeug - 127.0.0.1 - - [11/May/2024 12:01:46] "[33mGET /favicon.ico/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-11 12:02:10,622 - werkzeug - 127.0.0.1 - - [11/May/2024 12:02:10] "[32mGET /None/None HTTP/1.1[0m" 308 -
+INFO - 2024-05-11 12:02:10,642 - werkzeug - 127.0.0.1 - - [11/May/2024 12:02:10] "[33mGET /None/None/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-11 12:02:14,830 - werkzeug - 127.0.0.1 - - [11/May/2024 12:02:14] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:02:59,537 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:02:59,537 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:02:59,538 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:03:00,032 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:03:00,032 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:03:01,108 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:01] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:03:01,160 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:01] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:03:02,221 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:02] "[32mGET /bot/bot-create2 HTTP/1.1[0m" 308 -
+INFO - 2024-05-11 12:03:02,238 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:02] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-11 12:03:02,273 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:02] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:03:05,527 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:05] "[32mGET /bot/bot-create HTTP/1.1[0m" 308 -
+INFO - 2024-05-11 12:03:05,544 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:05] "GET /bot/bot-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 12:03:05,580 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:05] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:03:08,473 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:08] "[32mGET /site/site-create HTTP/1.1[0m" 308 -
+INFO - 2024-05-11 12:03:08,484 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:08] "GET /site/site-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 12:03:08,515 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:08] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:03:12,232 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:12] "[32mGET /site/None HTTP/1.1[0m" 308 -
+INFO - 2024-05-11 12:03:12,260 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:12] "[33mGET /site/None/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-11 12:03:15,346 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:15] "[32mGET /bot/None HTTP/1.1[0m" 308 -
+INFO - 2024-05-11 12:03:15,362 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:15] "[33mGET /bot/None/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-11 12:03:18,883 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:18] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 12:03:18,898 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:18] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:03:19,462 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:19] "[32mGET /bot HTTP/1.1[0m" 308 -
+INFO - 2024-05-11 12:03:19,473 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:19] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 12:03:19,518 - werkzeug - 127.0.0.1 - - [11/May/2024 12:03:19] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:08:22,936 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:08:22,936 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:08:22,937 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:08:23,439 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:08:23,439 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:08:25,258 - werkzeug - 127.0.0.1 - - [11/May/2024 12:08:25] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:08:25,316 - werkzeug - 127.0.0.1 - - [11/May/2024 12:08:25] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:08:37,630 - werkzeug - 127.0.0.1 - - [11/May/2024 12:08:37] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:08:37,666 - werkzeug - 127.0.0.1 - - [11/May/2024 12:08:37] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:08:42,743 - werkzeug - 127.0.0.1 - - [11/May/2024 12:08:42] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:10:45,592 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:10:45,592 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:10:45,593 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:10:46,182 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:10:46,183 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:10:47,686 - werkzeug - 127.0.0.1 - - [11/May/2024 12:10:47] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO - 2024-05-11 12:10:47,761 - werkzeug - 127.0.0.1 - - [11/May/2024 12:10:47] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:10:47,762 - werkzeug - 127.0.0.1 - - [11/May/2024 12:10:47] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:10:47,849 - werkzeug - 127.0.0.1 - - [11/May/2024 12:10:47] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:10:47,989 - werkzeug - 127.0.0.1 - - [11/May/2024 12:10:47] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:11:14,966 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:11:14,966 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:11:14,966 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:11:15,550 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:11:15,550 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:11:16,460 - werkzeug - 127.0.0.1 - - [11/May/2024 12:11:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO - 2024-05-11 12:11:16,533 - werkzeug - 127.0.0.1 - - [11/May/2024 12:11:16] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:11:16,533 - werkzeug - 127.0.0.1 - - [11/May/2024 12:11:16] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:11:16,617 - werkzeug - 127.0.0.1 - - [11/May/2024 12:11:16] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:11:16,764 - werkzeug - 127.0.0.1 - - [11/May/2024 12:11:16] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:11:39,426 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:11:39,426 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:11:39,427 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:11:39,999 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:11:40,000 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:11:40,699 - werkzeug - 127.0.0.1 - - [11/May/2024 12:11:40] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:11:40,757 - werkzeug - 127.0.0.1 - - [11/May/2024 12:11:40] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:11:49,362 - werkzeug - 127.0.0.1 - - [11/May/2024 12:11:49] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:11:49,400 - werkzeug - 127.0.0.1 - - [11/May/2024 12:11:49] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:11:52,127 - werkzeug - 127.0.0.1 - - [11/May/2024 12:11:52] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 12:11:52,163 - werkzeug - 127.0.0.1 - - [11/May/2024 12:11:52] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:15:56,618 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:15:56,618 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:15:56,619 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:15:57,084 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:15:57,085 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:16:00,007 - werkzeug - 127.0.0.1 - - [11/May/2024 12:16:00] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:16:00,067 - werkzeug - 127.0.0.1 - - [11/May/2024 12:16:00] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:17:33,228 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:17:33,228 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:17:33,229 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:17:33,772 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:17:33,772 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:17:35,002 - werkzeug - 127.0.0.1 - - [11/May/2024 12:17:35] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:17:35,063 - werkzeug - 127.0.0.1 - - [11/May/2024 12:17:35] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:18:46,829 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:18:46,829 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:18:46,830 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:18:47,404 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:18:47,404 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:18:48,260 - werkzeug - 127.0.0.1 - - [11/May/2024 12:18:48] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:18:48,318 - werkzeug - 127.0.0.1 - - [11/May/2024 12:18:48] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:19:13,085 - werkzeug - 127.0.0.1 - - [11/May/2024 12:19:13] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-11 12:19:13,119 - werkzeug - 127.0.0.1 - - [11/May/2024 12:19:13] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:19:14,501 - werkzeug - 127.0.0.1 - - [11/May/2024 12:19:14] "GET /bot/bot-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 12:19:14,534 - werkzeug - 127.0.0.1 - - [11/May/2024 12:19:14] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:19:14,929 - werkzeug - 127.0.0.1 - - [11/May/2024 12:19:14] "GET /site/site-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 12:19:14,989 - werkzeug - 127.0.0.1 - - [11/May/2024 12:19:14] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:19:21,438 - werkzeug - 127.0.0.1 - - [11/May/2024 12:19:21] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 12:19:21,472 - werkzeug - 127.0.0.1 - - [11/May/2024 12:19:21] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:19:21,921 - werkzeug - 127.0.0.1 - - [11/May/2024 12:19:21] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:19:21,957 - werkzeug - 127.0.0.1 - - [11/May/2024 12:19:21] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:23:16,615 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:23:16,615 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:23:16,616 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:23:17,111 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:23:17,111 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:23:18,594 - werkzeug - 127.0.0.1 - - [11/May/2024 12:23:18] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:23:18,658 - werkzeug - 127.0.0.1 - - [11/May/2024 12:23:18] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:23:23,613 - werkzeug - 127.0.0.1 - - [11/May/2024 12:23:23] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:25:20,940 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:25:20,940 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:25:20,940 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:25:21,460 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:25:21,460 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:25:22,246 - werkzeug - 127.0.0.1 - - [11/May/2024 12:25:22] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:25:22,305 - werkzeug - 127.0.0.1 - - [11/May/2024 12:25:22] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:26:21,937 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:26:21,938 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:26:21,939 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:26:22,589 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:26:22,591 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:26:23,622 - werkzeug - 127.0.0.1 - - [11/May/2024 12:26:23] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:26:23,694 - werkzeug - 127.0.0.1 - - [11/May/2024 12:26:23] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:31:34,983 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:31:34,983 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:31:34,984 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:31:35,537 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:31:35,537 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:31:37,038 - werkzeug - 127.0.0.1 - - [11/May/2024 12:31:37] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:31:37,080 - werkzeug - 127.0.0.1 - - [11/May/2024 12:31:37] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:37:03,930 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:37:03,930 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:37:03,931 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:37:04,436 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:37:04,436 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:37:05,951 - werkzeug - 127.0.0.1 - - [11/May/2024 12:37:05] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:37:06,048 - werkzeug - 127.0.0.1 - - [11/May/2024 12:37:06] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:37:08,807 - werkzeug - 127.0.0.1 - - [11/May/2024 12:37:08] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:37:33,172 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:37:33,172 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:37:33,173 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:37:33,702 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:37:33,702 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:37:35,027 - werkzeug - 127.0.0.1 - - [11/May/2024 12:37:35] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:37:35,072 - werkzeug - 127.0.0.1 - - [11/May/2024 12:37:35] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:37:37,288 - werkzeug - 127.0.0.1 - - [11/May/2024 12:37:37] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:38:15,539 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:38:15,539 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:38:15,540 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:38:16,106 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:38:16,106 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:38:16,983 - werkzeug - 127.0.0.1 - - [11/May/2024 12:38:16] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:38:17,035 - werkzeug - 127.0.0.1 - - [11/May/2024 12:38:17] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:39:07,575 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:39:07,575 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:39:07,576 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:39:08,119 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:39:08,120 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:39:08,998 - werkzeug - 127.0.0.1 - - [11/May/2024 12:39:08] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:39:09,065 - werkzeug - 127.0.0.1 - - [11/May/2024 12:39:09] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:42:11,424 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:42:11,424 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:42:11,425 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:42:12,084 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:42:12,084 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:42:12,955 - werkzeug - 127.0.0.1 - - [11/May/2024 12:42:12] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:42:13,010 - werkzeug - 127.0.0.1 - - [11/May/2024 12:42:13] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:42:58,705 - werkzeug - 127.0.0.1 - - [11/May/2024 12:42:58] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-11 12:42:58,757 - werkzeug - 127.0.0.1 - - [11/May/2024 12:42:58] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:43:01,471 - werkzeug - 127.0.0.1 - - [11/May/2024 12:43:01] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:43:02,728 - werkzeug - 127.0.0.1 - - [11/May/2024 12:43:02] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:43:02,788 - werkzeug - 127.0.0.1 - - [11/May/2024 12:43:02] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:43:04,203 - werkzeug - 127.0.0.1 - - [11/May/2024 12:43:04] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 12:43:04,273 - werkzeug - 127.0.0.1 - - [11/May/2024 12:43:04] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:43:06,146 - werkzeug - 127.0.0.1 - - [11/May/2024 12:43:06] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:57:20,762 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:57:20,762 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:57:20,763 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:57:21,301 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:57:21,301 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:57:24,876 - werkzeug - 127.0.0.1 - - [11/May/2024 12:57:24] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO - 2024-05-11 12:57:24,948 - werkzeug - 127.0.0.1 - - [11/May/2024 12:57:24] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:57:24,949 - werkzeug - 127.0.0.1 - - [11/May/2024 12:57:24] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:57:24,987 - werkzeug - 127.0.0.1 - - [11/May/2024 12:57:24] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:57:25,076 - werkzeug - 127.0.0.1 - - [11/May/2024 12:57:25] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:58:05,351 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 12:58:05,351 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 12:58:05,352 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 12:58:05,850 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 12:58:05,850 - werkzeug -  * Debugger PIN: 114-303-266
+INFO - 2024-05-11 12:58:08,639 - werkzeug - 127.0.0.1 - - [11/May/2024 12:58:08] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 12:58:08,694 - werkzeug - 127.0.0.1 - - [11/May/2024 12:58:08] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:58:11,478 - werkzeug - 127.0.0.1 - - [11/May/2024 12:58:11] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 12:59:12,186 - werkzeug - 127.0.0.1 - - [11/May/2024 12:59:12] "GET /sitemap.xml HTTP/1.1" 200 -
+INFO - 2024-05-11 12:59:14,202 - werkzeug - 127.0.0.1 - - [11/May/2024 12:59:14] "GET /api/menu/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:09:49,213 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 19:09:49,213 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 19:09:49,214 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 19:09:49,746 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 19:09:49,881 - werkzeug -  * Debugger PIN: 130-497-813
+INFO - 2024-05-11 19:09:52,665 - werkzeug - 127.0.0.1 - - [11/May/2024 19:09:52] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 19:09:52,707 - werkzeug - 127.0.0.1 - - [11/May/2024 19:09:52] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:09:52,797 - werkzeug - 127.0.0.1 - - [11/May/2024 19:09:52] "[33mGET /favicon.ico/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-11 19:09:57,385 - werkzeug - 127.0.0.1 - - [11/May/2024 19:09:57] "GET /site/site-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:09:57,429 - werkzeug - 127.0.0.1 - - [11/May/2024 19:09:57] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:10:00,336 - werkzeug - 127.0.0.1 - - [11/May/2024 19:10:00] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:10:00,393 - werkzeug - 127.0.0.1 - - [11/May/2024 19:10:00] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:10:02,487 - werkzeug - 127.0.0.1 - - [11/May/2024 19:10:02] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:10:02,533 - werkzeug - 127.0.0.1 - - [11/May/2024 19:10:02] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:10:04,213 - werkzeug - 127.0.0.1 - - [11/May/2024 19:10:04] "GET /bot/bot-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:10:04,272 - werkzeug - 127.0.0.1 - - [11/May/2024 19:10:04] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:10:05,767 - werkzeug - 127.0.0.1 - - [11/May/2024 19:10:05] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 19:10:05,815 - werkzeug - 127.0.0.1 - - [11/May/2024 19:10:05] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:10:12,883 - werkzeug - 127.0.0.1 - - [11/May/2024 19:10:12] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:11:45,381 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 19:11:45,381 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 19:11:45,383 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 19:11:45,883 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 19:11:45,884 - werkzeug -  * Debugger PIN: 130-497-813
+INFO - 2024-05-11 19:11:47,580 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:47] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 19:11:47,632 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:47] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:11:48,746 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:48] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:11:48,789 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:48] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:11:49,482 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:49] "GET /bot/bot-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:11:49,538 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:49] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:11:50,453 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:50] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:11:50,493 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:50] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:11:51,084 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:51] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:11:51,138 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:51] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:11:51,822 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:51] "GET /site/site-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:11:51,871 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:51] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:11:52,949 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:52] "GET /bot/bot-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:11:53,017 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:53] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:11:53,624 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:53] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:11:53,670 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:53] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:11:54,464 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:54] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 19:11:54,524 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:54] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:11:55,188 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:55] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:11:55,240 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:55] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:11:55,800 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:55] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:11:55,847 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:55] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:11:56,225 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:56] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:11:56,279 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:56] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:11:56,775 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:56] "GET /site/site-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:11:56,817 - werkzeug - 127.0.0.1 - - [11/May/2024 19:11:56] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:37:16,369 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 19:37:16,369 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 19:37:16,370 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 19:37:16,881 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 19:37:16,882 - werkzeug -  * Debugger PIN: 130-497-813
+INFO - 2024-05-11 19:37:19,243 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:19] "GET /site/site-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:37:23,325 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:23] "GET /site/site-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:37:23,370 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:23] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:37:24,187 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:24] "GET /site/site-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:37:24,239 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:24] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:37:24,333 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:24] "GET /site/site-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:37:24,373 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:24] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:37:25,169 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:25] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:37:25,221 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:25] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:37:26,286 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:26] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:37:26,328 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:26] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:37:26,921 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:26] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:37:26,976 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:26] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:37:27,350 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:27] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 19:37:27,399 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:27] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:37:27,882 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:27] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:37:27,945 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:27] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:37:29,334 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:29] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:37:29,379 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:29] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 19:37:29,771 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:29] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 19:37:29,839 - werkzeug - 127.0.0.1 - - [11/May/2024 19:37:29] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 20:24:20,945 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-11 20:24:20,945 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-11 20:24:20,946 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-11 20:24:21,458 - werkzeug -  * Debugger is active!
+INFO - 2024-05-11 20:24:21,459 - werkzeug -  * Debugger PIN: 130-497-813
+INFO - 2024-05-11 20:24:25,048 - werkzeug - 127.0.0.1 - - [11/May/2024 20:24:25] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 20:24:25,100 - werkzeug - 127.0.0.1 - - [11/May/2024 20:24:25] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 20:24:26,817 - werkzeug - 127.0.0.1 - - [11/May/2024 20:24:26] "GET /bot/bot-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 20:24:26,856 - werkzeug - 127.0.0.1 - - [11/May/2024 20:24:26] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 20:24:27,920 - werkzeug - 127.0.0.1 - - [11/May/2024 20:24:27] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-11 20:24:27,979 - werkzeug - 127.0.0.1 - - [11/May/2024 20:24:27] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 20:24:28,849 - werkzeug - 127.0.0.1 - - [11/May/2024 20:24:28] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 20:24:28,895 - werkzeug - 127.0.0.1 - - [11/May/2024 20:24:28] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 20:24:29,833 - werkzeug - 127.0.0.1 - - [11/May/2024 20:24:29] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 20:24:29,895 - werkzeug - 127.0.0.1 - - [11/May/2024 20:24:29] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 20:25:11,126 - werkzeug - 127.0.0.1 - - [11/May/2024 20:25:11] "GET /site/site-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 20:25:11,182 - werkzeug - 127.0.0.1 - - [11/May/2024 20:25:11] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 21:47:10,437 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:10] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 21:47:10,494 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:10] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 21:47:11,230 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:11] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 21:47:11,287 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:11] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 21:47:12,190 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:12] "GET /site/site-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 21:47:12,260 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:12] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 21:47:12,789 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:12] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-11 21:47:12,839 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:12] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 21:47:13,323 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:13] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-11 21:47:13,384 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:13] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 21:47:13,832 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:13] "GET /bot/bot-create/ HTTP/1.1" 200 -
+INFO - 2024-05-11 21:47:13,886 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:13] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 21:47:14,645 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:14] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-11 21:47:14,702 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:14] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 21:47:15,145 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:15] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-11 21:47:15,191 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:15] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-11 21:47:23,382 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:23] "GET /api/menu/ HTTP/1.1" 200 -
+INFO - 2024-05-11 21:47:26,033 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:26] "GET /api/menu/ HTTP/1.1" 200 -
+INFO - 2024-05-11 21:47:37,813 - werkzeug - 127.0.0.1 - - [11/May/2024 21:47:37] "GET /sitemap.xml HTTP/1.1" 200 -
+INFO - 2024-05-12 00:49:38,594 - werkzeug - 127.0.0.1 - - [12/May/2024 00:49:38] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:49:38,636 - werkzeug - 127.0.0.1 - - [12/May/2024 00:49:38] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:49:50,947 - werkzeug - 127.0.0.1 - - [12/May/2024 00:49:50] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-12 00:49:50,993 - werkzeug - 127.0.0.1 - - [12/May/2024 00:49:50] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:50:49,647 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:49] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:50:49,713 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:49] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:50:50,334 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:50] "GET /bot/bot-create/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:50:50,388 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:50] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:50:51,709 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:51] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:50:51,764 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:51] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:50:52,962 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:52] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:50:53,008 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:53] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:50:54,647 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:54] "GET /site/site-create/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:50:54,715 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:54] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:50:55,981 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:55] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:50:56,026 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:56] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:50:56,942 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:56] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:50:57,000 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:57] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:50:57,641 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:57] "GET /bot/bot-create/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:50:57,696 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:57] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:50:58,223 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:58] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:50:58,282 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:58] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:50:59,524 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:59] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-12 00:50:59,567 - werkzeug - 127.0.0.1 - - [12/May/2024 00:50:59] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:51:00,838 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:00] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:51:00,896 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:00] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:51:01,557 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:01] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-12 00:51:01,600 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:01] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:51:30,712 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:30] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:51:30,768 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:30] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:51:31,280 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:31] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-12 00:51:31,337 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:31] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:51:31,801 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:31] "GET /bot/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:51:31,858 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:31] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:51:32,221 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:32] "GET /bot/bot-create/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:51:32,265 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:32] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:51:32,667 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:32] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:51:32,734 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:32] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:51:33,436 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:33] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:51:33,483 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:33] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:51:34,321 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:34] "GET /site/site-create/ HTTP/1.1" 200 -
+INFO - 2024-05-12 00:51:34,387 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:34] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 00:51:35,037 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:35] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-12 00:51:35,091 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:35] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -

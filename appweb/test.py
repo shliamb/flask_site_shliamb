@@ -251,18 +251,48 @@ def day_utcnow(time_correction=None) -> datetime:
 
 
 
+# <ul>
+#     {% for item in menu_items if item.parent_id is none %}
+#     <li>
+#         {{ item.title }}
+#         {% if item.has_children %}
+#         <ul>
+#             {% for child in item.children %}
+#             <li>{{ child.title }}</li>
+#             {% endfor %}
+#         </ul>
+#         {% endif %}
+#     </li>
+#     {% endfor %}
+# </ul>
 
 
 
 
 #### MENU ####
-
-# READE DATA MENU
 #
+# Sorting menu items
 # data = read_menu()
+# out_data = []
+# for one in data:
+#     # Main Page
+#     if one.get("main_page") is None:
+#         out_data.append(one)
+#     # Secondary Page
+#     elif one.get("secondary_page") is None and one.get("publish") is True:
+#         parent = one.get("main_page")
+#         out_data.append(one)
+#         for one_sec in data:
+#             if one_sec.get("secondary_page") is not None and one_sec.get("main_page") == parent and one_sec.get("publish") is True:
+#                 out_data.append(one_sec)
+
+# print(out_data)
+
+
+
 # for n in data:
 #     print(n.get("title"))
-#print(data)
+# print(data)
 
 
 
@@ -283,3 +313,41 @@ def day_utcnow(time_correction=None) -> datetime:
 
 # res = write_menu(data)
 # print(res)
+
+
+
+
+
+
+# def get_menu():
+#     data = read_menu()
+#     out_data = []
+#     secondary_pages = {}
+
+#     for one in data:
+#         if one.get("secondary_page") is not None and one.get("publish") is True:
+#             parent = one.get("main_page")
+#             if parent not in secondary_pages:
+#                 secondary_pages[parent] = []
+#             secondary_pages[parent].append(one)
+
+#     # Теперь перебираем страницы еще раз, добавляем родительские и их вторичные страницы
+#     for one in data:
+#         # Main Page
+#         if one.get("main_page") is None:
+#             out_data.append(one)
+#         # Secondary Page
+#         elif one.get("secondary_page") is None and one.get("publish") is True:
+#             out_data.append(one)
+#             # Добавляем вторичные страницы, если они есть
+#             secondary_list = secondary_pages.get(one.get("id"))
+#             if secondary_list:
+#                 out_data.extend(secondary_list)
+
+#     return out_data
+
+
+
+
+# data = get_menu()
+# print(data)

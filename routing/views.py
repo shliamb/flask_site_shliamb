@@ -15,13 +15,24 @@ views_blueprint = Blueprint('views', __name__)
 
 
 
-# MENU
+#### MENU ####
 #
+# Sorting menu items
 def get_menu():
     data = read_menu()
-    # for n in data:
-    #     print(n.get("title"))
-    return data
+    out_data = []
+    for one in data:
+        # Main Page
+        if one.get("main_page") is None:
+            out_data.append(one)
+        # Secondary Page
+        elif one.get("secondary_page") is None and one.get("publish") is True:
+            parent = one.get("main_page")
+            out_data.append(one)
+            for one_sec in data:
+                if one_sec.get("secondary_page") is not None and one_sec.get("main_page") == parent and one_sec.get("publish") is True:
+                    out_data.append(one_sec)
+    return out_data
 
 # ROUTED MAIN PAGE
 @views_blueprint.route('/', methods=['GET'])
@@ -37,8 +48,9 @@ def get_page_main():
 @views_blueprint.route('/<page_1>/', methods=['GET'])
 def get_page_1(page_1):
     page_data = read_data_1(page_1)
+    menu = get_menu()
     if page_data:
-        return render_template('page_1.html', data=page_data)
+        return render_template('page_1.html', data=page_data, menu=menu)
     else:
         return render_template('error.html', message='Страница не найдена'), 404 
 
@@ -46,8 +58,9 @@ def get_page_1(page_1):
 @views_blueprint.route('/<page_1>/<page_2>/', methods=['GET'])
 def get_page_2(page_1, page_2):
     page_data = read_data_2(page_1, page_2)
+    menu = get_menu()
     if page_data:
-        return render_template('page_2.html', data=page_data)
+        return render_template('page_2.html', data=page_data, menu=menu)
     else:
         return render_template('error.html', message='Страница не найдена'), 404 
         

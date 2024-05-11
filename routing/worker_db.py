@@ -151,15 +151,6 @@ def update_data_2(id, data):
 
 #### MENU ####
 #
-# Read data Menu
-# def read_menu():
-#     with app.app_context():
-#         data = None
-#         query = select(Menu)
-#         result = db.session.execute(query)
-#         data = result.scalars().all()
-#         return data.serialize() if data else None
-
 def read_menu():
     with app.app_context():
         query = select(Menu)

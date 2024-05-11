@@ -57,13 +57,33 @@
 </div>
 
 
+
+<style>
+    .secondary {margin-left:30px;}
+    ul {list-style-type: none;}
+</style>
+
 <div>
-    {% for one in menu %}
     <ul>
-        <li>{{ one.title }}</li>
+        {% for one in menu %}
+        <li>
+            <a href="/{{ one.main_page + '/' if one.main_page else '' }}{{ one.secondary_page + '/' if one.secondary_page else '' }}"
+                
+                {% if one.secondary_page %}
+                    class="secondary {{ one.secondary_page }}"
+                {% elif one.main_page %}
+                    class="{{ one.main_page }}"
+                {% else %}
+                    class="home"
+                {% endif %}>
+                {{ one.title }}
+
+            </a>
+        </li>
+        {% endfor %}
     </ul>
-    {% endfor %}
 </div>
+
 
 
 
