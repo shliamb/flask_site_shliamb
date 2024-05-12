@@ -1,12 +1,11 @@
-import sys
-from pathlib import Path
-root_path = str(Path(__file__).resolve().parent.parent)
-sys.path.append(root_path)
+# import sys
+# from pathlib import Path
+# root_path = str(Path(__file__).resolve().parent.parent)
+# sys.path.append(root_path)
 
 # Теперь мы можем импортировать worker_db из api
-from routing.worker_db import read_data_main, write_data_main, update_data_main,\
-      write_data_1, read_data_1, write_data_2, read_data_2, get_sitemap_db, read_menu, write_menu
-
+from worker_db import read_data_main, write_data_main, update_data_main,\
+      write_data_1, read_data_1, write_data_2, read_data_2, get_sitemap_db, read_menu, write_menu, update_menu
 
 
 
@@ -49,6 +48,7 @@ def day_utcnow(time_correction=None) -> datetime:
 #     "url_site": "shliambur.ru",
 #     "title": "Title - Главная страница | Shliambur",
 #     "seo_title": "seo_title - Компания по разработке",
+#     "text_body": "Текст старницы",
 #     "seo_description": "seo_description - Компания по разработке",
 #     "seo_keyword": "seo_keyword - разработка",
 #     "date_update": date,
@@ -300,16 +300,28 @@ def day_utcnow(time_correction=None) -> datetime:
 #
 # data = {
 #     'url_site': "shliamb.ru",
-#     'main_page': "bot",
-#     'secondary_page': "bot-create2",
-#     'title': "Страница bot-create2",
+#     'main_page': "site",
+#     'secondary_page': "site-create",
+#     'title': "Страница site-create",
+    # 'count_2_page': ,
+    # 'count_comments': ,
+    # 'publish': self.publish,
+    # 'date_create': self.date_create,
+    # 'date_update': self.date_update,
+# }
+
+#
+# data = {
+#     'url_site': "shliamb.ru",
+#     # 'main_page': "bot",
+#     # 'secondary_page': "bot-create2",
+#     'title': "home",
 #     # 'count_2_page': ,
 #     # 'count_comments': ,
 #     # 'publish': self.publish,
 #     # 'date_create': self.date_create,
 #     # 'date_update': self.date_update,
 # }
-
 
 # res = write_menu(data)
 # print(res)
@@ -349,5 +361,5 @@ def day_utcnow(time_correction=None) -> datetime:
 
 
 
-# data = get_menu()
+# data = read_menu()
 # print(data)

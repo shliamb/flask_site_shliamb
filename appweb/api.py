@@ -1,14 +1,14 @@
 #### Relative imports ####
-import sys
-from pathlib import Path
-root_path = str(Path(__file__).resolve().parent.parent)
-sys.path.append(root_path)
+# import sys
+# from pathlib import Path
+# root_path = str(Path(__file__).resolve().parent.parent)
+# sys.path.append(root_path)
 #### Logging ####
 import logging
 logging.basicConfig(level=logging.INFO, filename='./routing/log/api.log', filemode='a', format='%(levelname)s - %(asctime)s - %(name)s - %(message)s',) 
 #### Flask ####
 from flask import Blueprint, jsonify, request
-from routing.worker_db import read_data_main, read_data_1, read_data_2, read_menu
+from worker_db import read_data_main, read_data_1, read_data_2, read_menu
 
 
 api_blueprint = Blueprint('api', __name__)

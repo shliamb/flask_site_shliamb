@@ -1,8 +1,8 @@
 #### Relative imports ####
-import sys
-from pathlib import Path
-root_path = str(Path(__file__).resolve().parent.parent)
-sys.path.append(root_path)
+# import sys
+# from pathlib import Path
+# root_path = str(Path(__file__).resolve().parent.parent)
+# sys.path.append(root_path)
 #### Logging ####
 import logging
 logging.basicConfig(level=logging.INFO, filename='./appweb/log/appweb.log', filemode='a', format='%(levelname)s - %(asctime)s - %(name)s - %(message)s',) 
@@ -12,7 +12,7 @@ from flask import Flask
 import sqlalchemy
 from sqlalchemy import select, insert, update, extract, join, func
 #### Modules ####
-from routing.models import db, Page_main, Page_1, Page_2, Menu
+from models import db, Page_main, Page_1, Page_2, Menu
 from keys import user_db, paswor_db
 
 

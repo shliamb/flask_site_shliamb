@@ -5,7 +5,7 @@ from sqlalchemy import pool
 
 from alembic import context
 
-from routing.models import db
+from appweb.models import db
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

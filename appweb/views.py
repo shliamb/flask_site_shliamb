@@ -1,14 +1,14 @@
 #### Relative imports ####
-import sys
-from pathlib import Path
-root_path = str(Path(__file__).resolve().parent.parent)
-sys.path.append(root_path)
+# import sys
+# from pathlib import Path
+# root_path = str(Path(__file__).resolve().parent.parent)
+# sys.path.append(root_path)
 #### Logging ####
 import logging
 logging.basicConfig(level=logging.INFO, filename='./routing/log/views.log', filemode='a', format='%(levelname)s - %(asctime)s - %(name)s - %(message)s',) 
 #### Flask ####
 from flask import Blueprint, Response, jsonify, render_template, request
-from routing.worker_db import read_data_main, read_data_1, read_data_2, get_sitemap_db, read_menu
+from worker_db import read_data_main, read_data_1, read_data_2, get_sitemap_db, read_menu
 
 
 views_blueprint = Blueprint('views', __name__)
@@ -20,6 +20,8 @@ views_blueprint = Blueprint('views', __name__)
 # Sorting menu items
 def get_menu():
     data = read_menu()
+    if data is None:
+        return None
     out_data = []
     for one in data:
         # Main Page
