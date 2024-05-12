@@ -2268,3 +2268,24 @@ INFO - 2024-05-12 00:51:34,321 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:34]
 INFO - 2024-05-12 00:51:34,387 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:34] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
 INFO - 2024-05-12 00:51:35,037 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:35] "GET / HTTP/1.1" 200 -
 INFO - 2024-05-12 00:51:35,091 - werkzeug - 127.0.0.1 - - [12/May/2024 00:51:35] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 12:35:04,520 - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO - 2024-05-12 12:35:04,521 - werkzeug - [33mPress CTRL+C to quit[0m
+INFO - 2024-05-12 12:35:04,522 - werkzeug -  * Restarting with stat
+WARNING - 2024-05-12 12:35:05,075 - werkzeug -  * Debugger is active!
+INFO - 2024-05-12 12:35:05,188 - werkzeug -  * Debugger PIN: 965-884-620
+INFO - 2024-05-12 12:35:07,730 - werkzeug - 127.0.0.1 - - [12/May/2024 12:35:07] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-12 12:35:07,779 - werkzeug - 127.0.0.1 - - [12/May/2024 12:35:07] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 12:35:07,988 - werkzeug - 127.0.0.1 - - [12/May/2024 12:35:07] "[33mGET /favicon.ico/ HTTP/1.1[0m" 404 -
+INFO - 2024-05-12 12:35:10,670 - werkzeug - 127.0.0.1 - - [12/May/2024 12:35:10] "GET /api/menu/ HTTP/1.1" 200 -
+INFO - 2024-05-12 12:35:11,571 - werkzeug - 127.0.0.1 - - [12/May/2024 12:35:11] "GET /sitemap.xml HTTP/1.1" 200 -
+INFO - 2024-05-12 14:13:09,119 - werkzeug - 127.0.0.1 - - [12/May/2024 14:13:09] "GET /bot/bot-create/ HTTP/1.1" 200 -
+INFO - 2024-05-12 14:13:09,170 - werkzeug - 127.0.0.1 - - [12/May/2024 14:13:09] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 14:13:10,135 - werkzeug - 127.0.0.1 - - [12/May/2024 14:13:10] "GET /bot/bot-create2/ HTTP/1.1" 200 -
+INFO - 2024-05-12 14:13:10,209 - werkzeug - 127.0.0.1 - - [12/May/2024 14:13:10] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 14:13:10,805 - werkzeug - 127.0.0.1 - - [12/May/2024 14:13:10] "GET /site/ HTTP/1.1" 200 -
+INFO - 2024-05-12 14:13:10,854 - werkzeug - 127.0.0.1 - - [12/May/2024 14:13:10] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 14:13:11,491 - werkzeug - 127.0.0.1 - - [12/May/2024 14:13:11] "GET /site/site-create/ HTTP/1.1" 200 -
+INFO - 2024-05-12 14:13:11,561 - werkzeug - 127.0.0.1 - - [12/May/2024 14:13:11] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
+INFO - 2024-05-12 14:13:12,319 - werkzeug - 127.0.0.1 - - [12/May/2024 14:13:12] "GET / HTTP/1.1" 200 -
+INFO - 2024-05-12 14:13:12,365 - werkzeug - 127.0.0.1 - - [12/May/2024 14:13:12] "[36mGET /static/custom.css HTTP/1.1[0m" 304 -
