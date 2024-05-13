@@ -32,7 +32,7 @@ db.init_app(app)
 def read_data_main(id):
     with app.app_context():
         data = None
-        query = select(Page_main).where(Page_main.id == id)
+        query = select(Page_main).filter_by(publish=True).where(Page_main.id == id)
         result = db.session.execute(query)
         data = result.scalar_one_or_none() 
         return data.serialize() if data else None
@@ -72,7 +72,7 @@ def update_data_main(id, data):
 def read_data_1(id):
     with app.app_context():
         data = None
-        query = select(Page_1).where(Page_1.id == id)
+        query = select(Page_1).where(Page_1.id == id).filter_by(publish=True)
         result = db.session.execute(query)
         data = result.scalar_one_or_none() 
         return data.serialize() if data else None
@@ -114,7 +114,7 @@ def update_data_1(id, data):
 def read_data_2(page_1, page_2):
     with app.app_context():
         data = None
-        query = select(Page_2).where(Page_2.id == page_2).where(Page_2.page_1_id == page_1)
+        query = select(Page_2).where(Page_2.id == page_2).where(Page_2.page_1_id == page_1).filter_by(publish=True)
         result = db.session.execute(query)
         data = result.scalar_one_or_none()
         return data.serialize() if data else None
@@ -148,12 +148,11 @@ def update_data_2(id, data):
 
 
 
-
 #### MENU ####
 #
 def read_menu():
     with app.app_context():
-        query = select(Menu)
+        query = select(Menu).filter_by(publish=True)
         result = db.session.execute(query)
         menu_items = result.scalars().all()
         return [item.serialize() for item in menu_items] if menu_items else None
